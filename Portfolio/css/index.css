@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400&display=swap');
+
+@font-face {
+    font-family: 'MyType';
+    src: url(../fonts/Kingthings_Trypewriter_2.ttf);
+}
+
+@font-face {
+    font-family: 'Realtime';
+    src: url('../fonts/realtimedemo-regular-webfont.woff2') format('woff2'),
+        url('../fonts/realtimedemo-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: Source Code Pro;
+}
+
+h2 {
+    font-family: Realtime;
+    margin: 0px 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* ---- SCROLLBAR ---- */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(255, 229, 206);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 140, 40);
+    border-radius: 8px;
+}
+
+@supports (scrollbar-color: rgb(255, 140, 40) rgb(255, 229, 206)) {
+    * {
+        scrollbar-color: rgb(255, 140, 40) rgb(255, 229, 206);
+        scrollbar-width: auto;
+    }
+}
+
+
+/* ---- NAVBAR ---- */
+.nav-container {
+    padding: 20px 0px 10px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    max-width: 1329px;
+}
+
+.nav-items ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-items ul li {
+    margin: 0px 30px;
+    text-transform: uppercase;
+}
+
+.nav-items ul li:hover {
+    color: rgb(255, 140, 40);
+    transition-duration: .2s;
+}
+
+.hamburger {
+    position: absolute;
+    right: 30px;
+    display: none;
+    width: 35px;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    margin: 6px 0px;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+.hamburger.is-active::before {
+    transform: rotate(-45deg) translate(-7px, 5px);
+    background-color: rgb(255, 140, 40);
+}
+
+.hamburger.is-active .bar {
+    opacity: 0;
+}
+
+.hamburger.is-active::after {
+    transform: rotate(45deg) translate(-6px, -5px);
+    background-color: rgb(255, 140, 40);
+}
+
+
+.mobile-nav-container {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    left: 100%;
+    z-index: 98;
+    background-color: #fff;
+    margin-top: 70px;
+    transition: 0.4s;
+}
+
+.mobile-nav-container.is-active {
+    left: 0;
+    transition: 0.4s;
+}
+
+@media (max-width: 512px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-items {
+        display: none;
+    }
+
+    .mobile-nav-container ul li {
+        text-align: center;
+        text-transform: uppercase;
+        padding: 12px;
+    }
+
+    .mobile-nav-container ul li:hover {
+        color: rgb(255, 140, 40);
+        transition-duration: .2s;
+    }
+}
+
+
+
+/* HEADER */
+
+.header-container {
+    display: flex;
+    position: relative;
+    justify-content: right;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.header-text-container {
+    position: absolute;
+    left: 10px;
+}
+
+.header-text-container h2 {
+    font-size: 80px;
+    margin-left: 40px;
+}
+
+.header-smile {
+    position: absolute;
+    top: 100px;
+    right: 500px;
+}
+
+.header-smile i {
+    font-size: 150px;
+    color: rgb(255, 140, 40);
+}
+
+.header-img-container {
+    display: flex;
+    margin-right: 100px;
+}
+
+.header-img img {
+    max-width: 450px;
+    box-shadow: 10px 10px rgb(255, 140, 40);
+}
+
+@media (max-width: 1166px) {
+    .header-text-container h2 {
+        font-size: 60px;
+        margin-top: 10px;
+        margin-left: 60px;
+    }
+
+    .header-smile {
+        top: 80px;
+        right: 400px;
+    }
+
+    .header-smile i {
+        font-size: 100px;
+    }
+
+    .header-img img {
+        max-width: 350px;
+    }
+
+}
+
+@media (max-width: 830px) {
+    .header-text-container {
+        max-width: 500px;
+        margin-top: 50px;
+    }
+
+    .header-img-container {
+        margin-right: 70px;
+    }
+
+    .header-smile {
+        right: 370px;
+    }
+}
+
+@media (max-width: 724px) {
+    .header-container {
+        flex-wrap: wrap;
+        height: 600px;
+        justify-content: center;
+    }
+
+    .header-text-container {
+        position: relative;
+        margin: 10px 0px;
+    }
+
+    .header-text-container h2 {
+        margin-left: 15px;
+    }
+
+    .header-img-container {
+        margin-top: -100px;
+        margin-right: 0px;
+    }
+
+    .header-smile {
+        top: 30px;
+        right: 200px;
+    }
+
+    .header-smile i {
+        font-size: 80px;
+    }
+}
+
+@media (max-width: 512px) {
+    .header-smile {
+        top: 80px;
+        right: 50px;
+    }
+
+    .header-text-container h2 {
+        max-width: 350px;
+    }
+
+    .header-smile i {
+        font-size: 100px;
+    }
+}
+
+@media (max-width: 376px) {
+    .header-container {
+        padding: 0px;
+        height: 600px;
+    }
+
+    .header-text-container {
+        padding: 0px;
+        margin-top: -90px;
+    }
+
+    .header-text-container h2 {
+        font-size: 45px;
+        margin-left: 0px;
+        max-width: 280px;
+    }
+
+    .header-img img {
+        max-width: 270px;
+        margin-top: -210px;
+    }
+
+    .header-smile {
+        top: 50px;
+    }
+
+    .header-smile i {
+        font-size: 70px;
+    }
+}
+
+
+/* ---- ABOUT ME TEXT ---- */
+
+.about-me-text {
+    padding: 150px 0px;
+    display: flex;
+    font-size: 25px;
+}
+
+.about-me-text-left {
+    padding-left: 75px;
+    padding-right: 30px;
+}
+
+.about-me-text-right {
+    padding-right: 75px;
+    padding-left: 30px;
+}
+
+@media (max-width: 869px) {
+    .about-me-text {
+        flex-direction: column;
+        padding: 50px 0px;
+    }
+
+    .about-me-text-right,
+    .about-me-text-left {
+        margin: 0px 50px;
+    }
+}
+
+@media (max-width: 376px) {
+    .about-me-text {
+        padding: 10px 0px;
+        margin-top: -80px;
+        font-size: 18px;
+    }
+
+    .about-me-text-right,
+    .about-me-text-left {
+        margin: 0px 25px;
+    }
+}
+
+
+/* ---- SKILLS ---- */
+.skills-container {
+    padding-bottom: 100px;
+}
+
+.skills-text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills h2 {
+    font-size: 90px;
+    text-align: center;
+}
+
+.skills-img {
+    margin-left: 100px;
+    position: relative;
+}
+
+.skills-img img {
+    max-width: 400px;
+    box-shadow: -10px 10px rgb(255, 140, 40);
+}
+
+#git {
+    position: absolute;
+    right: 50px;
+}
+
+.skills {
+    position: relative;
+}
+
+#css {
+    position: absolute;
+    right: 300px;
+    top: 70px;
+}
+
+#js {
+    position: absolute;
+    top: 160px;
+    right: 370px;
+}
+
+#html {
+    position: absolute;
+    top: 200px;
+    right: 80px;
+}
+
+#git span, #css span, #js span, #html span {
+    box-shadow: inset 0 -35px rgb(255, 140, 40);
+}
+
+.skill-set {
+    display: none;
+}
+
+
+
+/* THATS ME ICON WITH ARROW */
+
+.arrow-text {
+    position: absolute;
+    top: 320px;
+    right: -250px;
+}
+
+.arrow-text p {
+    text-align: center;
+    width: 170px;
+}
+
+.arrow-text .fa-regular.fa-face-smile {
+    color: #000;
+}
+
+.icon-arrow {
+    width: 70px;
+    height: 2px;
+    background-color: #000;
+    position: relative;
+    top: -2px;
+    right: 30px;
+    border-radius: 4px;
+    transform: rotate(200deg)
+}
+
+.icon-arrow::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    transform: rotate(-45deg);
+    position: absolute;
+    right: -3px;
+    bottom: -5px;
+}
+
+.icon-arrow::after {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    transform: rotate(45deg);
+    position: absolute;
+    right: -3px;
+    bottom: 5px;
+}
+
+/* THE END - NOW STARTS THE @MEDIA FOR SKILLS */
+
+@media (max-width: 1167px) {
+    .skills h2 {
+        font-size: 60px;
+    }
+
+    #css {
+        top: 50px;
+        right: 200px;
+    }
+
+    #js {
+        top: 130px;
+        right: 240px;
+    }
+
+    #html {
+        top: 167px;
+        right: 80px;
+    }
+
+    #git span, #css span, #js span, #html span {
+        box-shadow: inset 0 -25px rgb(255, 140, 40);
+    }
+}
+
+@media (max-width: 890px) {
+    .skills-text {
+        max-width: 800px;
+    }
+
+    .skills h2 {
+        margin-right: 10px;
+        font-size: 50px;
+    }
+
+    .skills-img img {
+        width: 300px;
+    }
+
+    .skills-img {
+        margin-left: 60px;
+        width: 100%;
+        display: flex;
+    }
+
+    #git span, #css span, #js span, #html span {
+        box-shadow: inset 0 -18px rgb(255, 140, 40);
+    }
+
+    .arrow-text {
+        position: absolute;
+        top: 250px;
+        right: 200px;
+    }
+}
+
+@media (max-width: 725px) {
+    .skills-container {
+        justify-content: center;
+        padding-top: 100px;
+        padding: 50px 0px;
+    }
+
+    .skills-text {
+        justify-content: center;
+    }
+
+    .skills-img {
+        width: 100%;
+        padding-right: 20px;
+        padding-left: 30px;
+        justify-content: center;
+        margin-left: 0px;
+    }
+
+    .skills-img img {
+        width: 100%;
+        max-height: 400px;
+    }
+
+    .skills {
+        display: none;
+    }
+
+    .skill-set {
+        display: block;
+        font-family: RealTime;
+    }
+
+    .skill-set span {
+        box-shadow: inset 0 -13px rgb(255, 140, 40);
+    }
+
+    .fa-solid.fa-arrow-right-long {
+        font-size: 20px;
+    }
+
+    .arrow-text {
+        top: 450px;
+        right: 150px;
+    }
+
+    .icon-arrow {
+        width: 35px;
+        transform: rotate(230deg);
+        right: 0px;
+    }
+}
+
+@media (max-width: 426px) {
+    .arrow-text {
+        top: 420px;
+        right: 30px;
+    }
+}
+
+@media (max-width: 413px) {
+    .arrow-text {
+        display: none;
+    }
+}
