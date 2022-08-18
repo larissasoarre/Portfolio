@@ -2,9 +2,18 @@
 <html lang="en">
 
 <head>
+    <!---- STYLESHEET ---->
     <link rel="stylesheet" href="css/index.css">
 
+    <!---- FONT AWESOME ---->
     <script src="https://kit.fontawesome.com/84b7e13fbc.js" crossorigin="anonymous"></script>
+
+    <!---- SWIPER CSS ---->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!--- SLIDE IN ANIMATION ---->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,17 +22,17 @@
 </head>
 
 <body>
-    <nav>
+    <nav id="nav-scrollback">
         <div class="nav-container">
             <div class="nav-items">
                 <ul>
-                    <a href="">
+                    <a href="#aboutme">
                         <li>About me</li>
                     </a>
-                    <a href="">
+                    <a href="#projects-title">
                         <li>Projects</li>
                     </a>
-                    <a href="">
+                    <a href="#contact">
                         <li>Contact</li>
                     </a>
                 </ul>
@@ -32,25 +41,61 @@
             <button class="hamburger">
                 <div class="bar"></div>
             </button>
+
+            <div class="toggleIcon" id="toggleColors">
+                <p>Click<br>here</p>
+            </div>
         </div>
     </nav>
 
     <nav class="mobile-nav-container">
         <ul>
-            <a href="">
-                <li>About me</li>
+            <a href="#aboutme">
+                <li class="nav-list-aboutme">About me</li>
             </a>
-            <a href="">
-                <li>Projects</li>
+            <a href="#projects-title">
+                <li class="nav-list-projects">Projects</li>
             </a>
-            <a href="">
-                <li>Contact</li>
+            <a href="#contact">
+                <li class="nav-list-contact">Contact</li>
             </a>
         </ul>
     </nav>
 
     <section>
         <div class="header-container">
+            <div class="code-text-background .blue-opacity">
+                <div id="cover-up"></div>
+                <p class="text">
+                    &lt;body&gt;<br>
+                    &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing<br>
+                    elit. Aenean commodo ligula eget dolor. Donec quam felis, ultricies nec.<br>
+                    Are you even reading this? Ellentesque eu, pretium quis, sem.&lt;/p&gt;<br>
+                    <br>
+                    &lt;form action="#" method="post"&gt;<br>
+                    &lt;fieldset&gt;<br>
+                    &lt;label for="name"&gt;Name:&lt;/label&gt;<br>
+                    &lt;input type="text" id="name" placeholder="Enter your <br>
+                    full name" /&gt;<br>
+                    <br>
+                    &lt;label for="email"&gt;Email:&lt;/label&gt;<br>
+                    &lt;input type="email" id="email" placeholder="Enter <br>
+                    your email address" /&gt;<br>
+                    <br>
+                    &lt;label for="message"&gt;Message:&lt;/label&gt;<br>
+                    &lt;textarea id="message" placeholder="Yeah maybe you're actualy reading
+                    this"&gt;&lt;/textarea&gt;<br>
+                    <br>
+                    &lt;input type="submit" value="Send message" /&gt;<br>
+                    <br>
+                    &lt;/fieldset&gt;<br>
+                    &lt;/form&gt;<br>
+                    <br>
+                    &lt;h2&gt;Aenean commodo ligula eget dolor aenean massa&lt;/h2&gt;<br>
+                    &lt;/body&gt;<br>
+                    &lt;/html&gt;<br>
+                </p>
+            </div>
 
             <div class="header-text-container">
                 <h2>Hello,</h2>
@@ -58,28 +103,28 @@
                 <h2>I am a Web Developer.</h2>
             </div>
 
-            <div class="header-img-container">
-                <div class="header-smile">
-                    <i id="header-smile-id" class="fa-regular fa-face-smile"></i>
-                </div>
-
-                <div class="header-img">
-                    <img src="img/IMG_2898_Original_HEIC.jpg" alt="Profile Photo of Larissa Soares">
-                </div>
+            <div class="header-smile">
+                <i id="header-smile-id" class="fa-regular fa-face-smile"></i>
             </div>
         </div>
     </section>
 
-    <section>
-        <div class="about-me-text">
+    <section class="remove-toggle">
+        <div id="aboutme" class="about-me-text">
             <div class="about-me-text-left">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in congue tortor. Nunc lobortis
-                    eget leo a molestie. Duis ultrices mollis nulla, id fermentum arcu.</p>
+                <p> Hey! I'm Front-End Developer that likes to use my passion and skills to create fun and nice things for the web.</p>
+
+                <p>My interest in web development sparkled one year ago when I helped a friend to develop a website. A few lines off CSS here, others of HTML there and I had sick programming skills (well, at least that's what I thought).</p>
+
+                <p>Since then, I haven't stopped learning and creating.</p>
             </div>
 
             <div class="about-me-text-right">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in congue tortor. Nunc lobortis
-                    eget leo a molestie. Duis ultrices mollis nulla, id fermentum arcu.</p>
+                <p>As a developer, I like to pay attention to my code's readability, consistency, and cleanness. Having features working is nice, but it's even nicer when it stays that way regardless of who's working with it.</p>
+
+                <p>Creating intuitive and dynamic user experiences is definitely part of the process also.</p>
+
+                <p>I'm always excited to work on new projects because I learn something new with them every time. Always up for a challenge!</p>
 
                 <h3 class="skill-set"><span> Best skills <i class="fa-solid fa-arrow-right-long"></i> Html - CSS -
                         JavaScript - Git</span></h3>
@@ -90,11 +135,11 @@
     <section>
         <div class="skills-container">
             <div class="skills-text">
-                <div class="skills-img"><img src="img/IMG-2910.JPG" alt="">
+                <div class="skills-img"><img src="img/IMG-2910.JPG" alt="Profile Photo of Larissa Soares">
 
                     <div class="arrow-text">
                         <div class="icon-arrow"></div>
-                        <p>that's me again <i class="fa-regular fa-face-smile"></i></p>
+                        <p>yup that's me <i class="fa-regular fa-face-smile"></i></p>
                     </div>
                 </div>
 
@@ -109,6 +154,112 @@
     </section>
 
 
+
+    <!-- PROJECTS I'VE WORKED ON -->
+
+    <section>
+        <div id="projects-title">
+            <h2>Projects I Have Worked On</h2>
+        </div>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <a href="../Dublin/index.html">
+                        <div class="project-container">
+                            <div class="project-img1"><img src="img/Dublin-Screenshot.png"
+                                    alt="Homescreen of the Dublin Template">
+                            </div>
+
+                            <div class="project-text-area">
+                                <div class="project-info">
+                                    <p>001</p>
+                                    <p>2002</p>
+                                </div>
+
+
+                                <h2> Dublin <br> Blog Template</h2>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="project-container">
+                        <div class="project-empty-space">
+                        </div>
+
+                        <div class="project-text-area">
+                            <div class="project-info">
+                                <p>002</p>
+                                <p>2002</p>
+                            </div>
+
+                            <h2>Game Chantal<br>Coming Up Soon</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="project-container">
+                        <div class="project-empty-space"></div>
+
+                        <div class="project-text-area">
+                            <div class="project-info">
+                                <p>003</p>
+                                <p>2002</p>
+                            </div>
+
+                            <h2>Coming Up<br>Soon</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!---- CONTACT ---->
+
+    <section>
+        <div class="contact-container">
+            <div class="contact-line">
+                <h2 id="contact">Would you like to get in touch<span id="question-mark">?</span></h2>
+            </div>
+            <p>Drope me a line on: <span id="email">cttsoares@gmail.com</span></p>
+
+            <div class="contact-social-media">
+                <p>You may also find me on</p>
+                <div class="social-platforms">
+                    <h3><a href="#"> Github</a></h3>
+                    <h3><a href="#"> LinkedIn</a></h3>
+                </div>
+            </div>
+
+            <i id="laptop" class="fa-solid fa-laptop-code" data-aos="fade-left" data-aos-duration="1000"></i>
+        </div>
+    </section>
+
+    <footer>
+        <p>You might as well go back to the <span> <a href="#nav-scrollback"> top</a></span> now <i class="fa-regular fa-face-smile"></i></p>
+    </footer>
+
+
+
+    <!---- SWIPER JS ---->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!---- SLIDE IN ANIMATION ---->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!---- PAGE JS ---->
     <script src="js/index.js"></script>
 </body>
 
