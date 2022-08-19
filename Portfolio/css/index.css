@@ -170,7 +170,7 @@ ul {
     display: none;
 }
 
-#toggleColors {
+#inverted-theme {
     position: absolute;
     padding: 5px 15px;
     left: 15px;
@@ -179,7 +179,7 @@ ul {
     cursor: pointer;
 }
 
-#toggleColors p {
+#inverted-theme p {
     text-transform: capitalize;
     font-size: 15px;
     /* text-align: center; */

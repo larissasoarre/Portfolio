@@ -40,10 +40,10 @@ window.onload = function () {
 
 //Invert colors
 
-const toggleColors = document.getElementById('toggleColors');
+const invertedTheme = document.getElementById('inverted-theme');
 const blueOpacity = document.querySelector(".text")
 
-toggleColors.onclick = function () {
+invertedTheme.onclick = function () {
     document.body.classList.toggle("inverted-theme");
     document.body.style.transition = '.1s';
     blueOpacity.classList.toggle('blue-opacity')
