@@ -611,12 +611,12 @@ h4 {
 }
 
 .sub-img1 img {
-    width: 100%;
+    width: auto;
     max-height: 300px;
 }
 
 .sub-img2 img {
-    width: 100%;
+    width: auto;
     max-height: 250px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -742,10 +742,12 @@ h4 {
     }
 
     .sub-img1 img {
+        width: auto;
         max-height: 200px;
     }
 
     .sub-img2 img {
+        width: auto;
         max-height: 150px;
     }
 
