@@ -502,7 +502,6 @@ ul {
 
 
 /* THATS ME ICON WITH ARROW */
-
 .arrow-text {
     position: absolute;
     top: 320px;
@@ -554,7 +553,6 @@ ul {
 }
 
 /* THE END - NOW STARTS THE @MEDIA FOR SKILLS */
-
 @media (max-width: 1167px) {
     .skills h2 {
         font-size: 60px;
@@ -832,7 +830,7 @@ ul {
 
 @media (max-width: 725px) {
     #projects-title h2 {
-        padding: 150px 30px 0px;
+        padding: 50px 30px 0px;
         font-size: 40px;
     }
 }
@@ -1001,6 +999,6 @@ footer span {
 
 @media (max-width: 416px) {
     footer {
-        padding: 10px 0px;
+        padding: 10px 15px;
     }
 }
