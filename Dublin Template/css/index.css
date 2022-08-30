@@ -98,7 +98,7 @@ ul {
     position: absolute;
     right: 30px;
     display: none;
-    width: 40px;
+    width: 34px;
     appearance: none;
     background: none;
     outline: none;
@@ -129,7 +129,7 @@ ul {
 }
 
 .hamburger.is-active::after {
-    transform: rotate(45deg) translate(-6px, -5px);
+    transform: rotate(45deg) translate(-7px, -4px);
     background-color: #000;
 }
 
@@ -595,7 +595,8 @@ ul {
 
 /* INFORMATION BOX */
 .info {
-    height: 100%;
+    width: 100vw;
+    height: auto;
     margin-top: 200px;
 }
 
@@ -618,8 +619,8 @@ ul {
     margin-top: 50px;
     width: 100%;
     max-height: 470px;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
+    border-top-left-radius: 47.5%;
+    border-top-right-radius: 47.5%;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -660,10 +661,14 @@ ul {
 
 @media (max-width: 750px) {
     .info-img1 img {
+        width: auto;
+        max-width: 229px;
         height: 320px;
     }
 
     .info-img2 img {
+        width: auto;
+        max-width: 230px;
         height: 300px;
     }
 }
