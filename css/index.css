@@ -116,7 +116,7 @@ ul {
     position: absolute;
     right: 30px;
     display: none;
-    width: 35px;
+    width: 40px;
     appearance: none;
     background: none;
     outline: none;
@@ -632,8 +632,7 @@ ul {
         width: 100%;
         display: flex;
         flex-direction: column;
-        padding-right: 20px;
-        padding-left: 30px;
+        padding: 0px 30px;
         justify-content: center;
         align-items: center;
         margin-left: 0px;
@@ -670,16 +669,30 @@ ul {
     }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 460px) {
     .arrow-text {
         top: 420px;
         right: 30px;
     }
+
+    .skills-img img {
+        width: 300px;
+        height: auto;
+        max-height: 300px;
+    }
+
+    .skills-img {
+        padding: 0px 0px;
+        width: 100%;
+        display: flex;
+    }
 }
 
-@media (max-width: 413px) {
-    .arrow-text {
-        display: none;
+@media (max-width: 362px) {
+    .skills-img img {
+        width: 255px;
+        height: auto;
+        max-height: 255px;
     }
 }
 
@@ -984,4 +997,10 @@ footer p {
 footer span {
     color: var(--secondary-color);
     cursor: pointer;
+}
+
+@media (max-width: 416px) {
+    footer {
+        padding: 10px 0px;
+    }
 }

@@ -24,6 +24,16 @@ h2 {
     text-transform: uppercase;
 }
 
+a {
+    text-decoration: none;
+    color: #000;
+    font-family: Nunito Sans;
+}
+
+ul {
+    list-style-type: none;
+}
+
 .button {
     background-color: #9b5634;
     width: fit-content;
@@ -44,14 +54,19 @@ h2 {
     transition-duration: 0.4s;
 }
 
-a {
-    text-decoration: none;
-    color: #000;
+/* ---- NAVBAR ---- */
+.nav-container {
+    position: relative;
+    padding: 20px 0px 10px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
 }
 
-/* NAVBAR */
-
 .nav {
+    width: 100%;
+    max-width: 1389px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -61,7 +76,7 @@ a {
 .logo {
     font-family: BrownSugar, Verdana;
     font-size: 40px;
-    padding-left: 10px;
+    padding-left: 20px;
     cursor: pointer;
 }
 
@@ -70,14 +85,7 @@ a {
 }
 
 .nav-links li {
-    list-style: none;
-}
-
-.nav-links li a {
-    text-decoration: none;
     text-transform: uppercase;
-    color: black;
-    font-family: Quicksand, Verdana;
     padding: 20px;
 }
 
@@ -87,22 +95,78 @@ a {
 
 .hamburger {
     position: absolute;
-    top: 35px;
     right: 30px;
-    flex-direction: column;
-    justify-content: space-between;
+    display: none;
+    width: 40px;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    margin: 4px 0px;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+.hamburger.is-active::before {
+    transform: rotate(-45deg) translate(-11px, 6px);
+    background-color: #000;
+}
+
+.hamburger.is-active .bar {
+    opacity: 0;
+}
+
+.hamburger.is-active::after {
+    transform: rotate(45deg) translate(-6px, -5px);
+    background-color: #000;
+}
+
+.mobile-nav-container {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    left: 100%;
+    padding: 30px 0px;
+    z-index: 98;
+    background-color: #fdfaf4;
+    margin-top: 70px;
+    transition: 0.4s;
+}
+
+.mobile-nav-container.is-active {
     display: none;
 }
 
-@media (max-width:800px) {
-    .nav-links li a {
-        padding: 10px;
+
+@media (max-width: 902px) {
+    .nav {
+        justify-content: space-between;
+    }
+
+    .nav-links li {
+        text-transform: uppercase;
+        padding: 20px 15px;
     }
 }
 
-@media (max-width:690px) {
+@media (max-width: 794px) {
     .hamburger {
         display: flex;
+        flex-direction: column;
     }
 
     .nav-links {
@@ -111,29 +175,26 @@ a {
         background-color: #fdfaf4;
     }
 
-    .nav {
-        flex-direction: column;
-        align-items: flex-start;
+    #nav-list li {
+        text-align: center;
+        text-transform: uppercase;
+        padding: 30px 0px;
     }
 
-    .nav-links ul {
-        width: 100%;
-        flex-direction: column;
+    #nav-list li a:hover {
+        color: #c38d5f;
+        transition-duration: .2s;
     }
 
-    .nav-links li {
-        text-align: end;
-        margin-right: -10px;
-        padding-top: 10px;
+    .mobile-nav-container.is-active {
+        left: 0px;
+        display: block;
+        transition: 0.4s;
     }
 
-    .nav-links.active {
-        display: flex;
-        position: absolute;
-        top: 70px;
-        right: 0px;
-        padding-right: 20px;
-        padding-bottom: 10px;
+    .mobile-nav-container.toggle-back {
+        left: 500px;
+        transition: 0.4s;
     }
 }
 
@@ -199,13 +260,16 @@ a {
 
     .hero-images {
         max-width: 400px;
+        height: auto;
     }
 
     .hero-img1 img {
+        width: auto;
         max-height: 370px;
     }
     
     .hero-img2 img {
+        width: auto;
         max-height: 370px;
     }
 
@@ -248,7 +312,6 @@ a {
 }
 
 /* CATEGORIES */
-
 .categories {
     display: flex;
     align-items: center;
@@ -307,7 +370,7 @@ a {
     }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 560px) {
     .categories {
         display: flex;
         flex-direction: column;
@@ -315,7 +378,7 @@ a {
     }
 
     .cat-container {
-        width: 100%;
+        width: 100vw;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -343,8 +406,9 @@ a {
     
     }
 }
-/* ABOUT ME */
 
+
+/* ABOUT ME */
 .about-me {
     background-color: #9b5634;
 }
