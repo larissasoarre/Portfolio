@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+
+@font-face {
+    font-family: 'Wedges';
+    src: url(../fonts/Wedges.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    position: relative;
+    font-family: Wedges;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100px;
+}
+
+.start-game {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.start-btn {
+    position: absolute;
+}
+
+.start-game.none {
+    display: none;
+}
+
+/* AJUSTES DO FUNDO DO JOGO */
+.memoria-bkg, .start-memoria-bkg {
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.memoria-bkg img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 80%;
+}
+
+.start-memoria-bkg img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 100%;
+}
+
+/* AJUSTES DO CONTAINER E DAS CARTAS */
+.jogo-memoria {
+    width: 600px;
+    height: 480px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    position: relative;
+}
+
+.memoria-carta {
+    display: flex;
+    width: calc(33.333% - 40px);
+    height: calc(50% - 20px) ;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 20px;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.memoria-carta:active {
+    transform: scale(.97);
+    transition: .3s;
+}
+
+.memoria-carta.flip {
+    transform: rotateY(180deg);
+}
+
+.lado-frontal, .lado-traseiro {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    padding: 70px 50px;
+    border-radius: 10px;
+    backface-visibility: hidden;
+}
+
+.lado-frontal {
+    transform: rotateY(180deg);
+    box-shadow: 1px 1px 7px 0px rgb(190, 187, 187);
+    background-color: rgb(255, 238, 113);
+}
+
+.lado-traseiro {
+    box-shadow: 1px 1px 7px 0px rgb(190, 187, 187);
+    background-color: rgb(255, 255, 255);
+}
+
+
+/* BOTAO DE VOLTAR PARA A TELA INICIAL */
+.voltar {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    padding: 6px 10px;
+    border-radius: 50%;
+    background-color: #FFEE57;
+    border-bottom: #FFC90C solid 3px;
+    box-shadow: 0px 0px 0px 4px #fff;
+    cursor: pointer;
+}
+
+.voltar i {
+    color: white;
+    font-size: 30px;
+}
+
+.voltar:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition-duration: .4s;
+}
+
+
+/* POP-UP PARA REINICIAR O JOGO */
+.pop-up {
+    display: none;
+}
+
+.pop-up.add {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+.back-cover {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    opacity: 70%;
+
+}
+
+.pop-up-elements {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+#pop-up-title {
+    position: absolute;
+    top: 18%;
+    font-size: 27px;
+    color: #fff;
+    -webkit-text-stroke: .3px #000;
+}
+
+#pop-up img {
+    position: relative;
+    width: 80%;
+    max-width: 400px;
+}
+
+.pop-up-buttons {
+    position: absolute;
+    display: flex;
+    bottom: 15%;
+}
+
+.btn {
+    width: fit-content;
+    font-size: 20px;
+    color: #fff;
+    padding: 10px 60px;
+    margin: 30px;
+    border-radius: 7px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: #3DB7DE solid 5.5px;
+    box-shadow: 0px 0px 0px 3px #fff;
+    -webkit-text-stroke: #000 1.3px;
+    background: linear-gradient(45deg, #79E4FF 50%, #5ad3fc 50%);
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    transition-duration: .4s;
+}
+
+.next-btn, .home-btn {
+    font-size: 15px;
+    padding: 7px 32px;
+    -webkit-text-stroke: .8px #000;
+    box-shadow: 0px 0px 0px 3px rgb(237, 237, 237);
+}
+
+.next-btn {
+    margin-left: 10px;
+    padding: 7px 33px;
+}
