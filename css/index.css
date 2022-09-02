@@ -760,32 +760,32 @@ ul {
 .project-empty-space {
     width: 300px;
     background-color: var(--primary-color);
-    height: 157px;
+    height: 168px;
     border: solid var(--secondary-color) 2px;
 }
 
 .project-empty-space::before {
     content: "";
     display: inline-block;
-    width: 340px;
+    width: 345px;
     height: 2px;
     background-color: var(--secondary-color);
-    transform: rotate(-27.5deg);
+    transform: rotate(-29.1deg);
     position: absolute;
-    right: -20px;
-    top: 78px;
+    right: -22px;
+    top: 84px;
 }
 
 .project-empty-space::after {
     content: "";
     display: inline-block;
-    width: 340px;
+    width: 345px;
     height: 2px;
     background-color: var(--secondary-color);
-    transform: rotate(27.5deg);
+    transform: rotate(29.1deg);
     position: absolute;
-    right: -20px;
-    top: 78px;
+    right: -22px;
+    top: 84px;
 }
 
 .swiper {
