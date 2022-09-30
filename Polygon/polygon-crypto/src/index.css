@@ -262,6 +262,7 @@ h2 {
   margin: 0px 0px 20px;
   font-size: 50px;
   background: -webkit-linear-gradient( rgb(90, 25, 121), rgb(53, 79, 210));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
