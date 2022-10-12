@@ -20,7 +20,7 @@ const Header = () => {
 
           <p>Your guide to the world of the cryptocurrency. Get started with the easiest platform to track and convert crypto</p>
 
-          <div className="button">Get Started</div>
+          <div className="button header">Get Started</div>
           </div>
       </div>
     </div>

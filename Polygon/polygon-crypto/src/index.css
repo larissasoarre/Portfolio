@@ -24,23 +24,115 @@ h2 {
   font-family: Teko;
 }
 
+
+
+/* PAGE BACKGROUND */
 .container {
-  width: 100wh;
-  height: 100%;
+  width: 100%;
+  height: auto;
   display: flex;
   position: relative;
+  z-index: 1;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(to right top, #000, rgb(42, 25, 46));
+  background: #0B0414;
   overflow: hidden;
 }
 
+.page-content {
+  width: 100%;
+  max-width: 1400px;
+  overflow-x: hidden;
+}
+
+.glass-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
+  z-index: 3;
+  backdrop-filter: blur(4rem);
+}
+
+.ball-1,
+.ball-2,
+.ball-3 {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+.ball-1 {
+  top: -100px;
+  left: -100px;
+  background-color: #352b4c;
+}
+
+.ball-2 {
+  height: 400px;
+  top: 500px;
+  right: -100px;
+  background-color: #3f1b48;
+}
+
+.ball-3 {
+  width: 300px;
+  height: 400px;
+  bottom: 100px;
+  left: -100px;
+  background-color: rgb(21, 11, 59);
+}
+
+.letters {
+  position: absolute;
+  width: fit-content;
+  margin: 0px;
+  right: 50px;
+  top: -150px;
+  z-index: 3;
+  font-family: Teko;
+  font-size: 300px;
+  background-clip: text;
+  background-image: linear-gradient(to top, rgb(114, 10, 161), rgb(8, 2, 17) 65%);
+  color: rgb(8, 2, 17);
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: 10px;
+}
+
+.letters.G {
+  position: absolute;
+  top: 990px;
+  right: 50px;
+  font-size: 350px;
+  background-image: linear-gradient(to top, rgb(105, 53, 210), rgb(8, 2, 17) 65%);
+  z-index: 3;
+}
+
+.letters.N {
+  position: absolute;
+  bottom: -300px;
+  top: auto;
+  left: -20px;
+  font-size: 350px;
+  background-image: linear-gradient(to top, rgb(17, 4, 28), rgb(24, 45, 72) 65%);
+  z-index: 3;
+  overflow: hidden;
+}
+
+
+
+/* NAVBAR */
 .header {
   width: 100%;
+  height: fit-content;
 }
 
 .navbar {
-  width: 100wh;
+  width: 100%;
   padding: 20px 0px 20px 20px;
   margin-bottom: 30px;
   display: flex;
@@ -85,6 +177,9 @@ h2 {
   font-family: Teko;
 }
 
+
+
+/* HEADER */
 .hero-1 {
   width: 100%;
   height: 400px;
@@ -112,7 +207,6 @@ h2 {
   font-family: Teko;
   font-size: 45px;
   text-align: right;
-
 }
 
 .hero-quote h2 {
@@ -159,21 +253,90 @@ h2 {
   transition: ease-in .5s;
 }
 
+@media (max-width: 1051px) {
+  .hero-1 {
+    height: fit-content;
+    align-items: center;
+  }
+
+  .hero-image {
+    display: none;
+  }
+
+  .hero-quote {
+    position: relative;
+    right: 0;
+    height: fit-content;
+    padding: 0px 100px;
+    width: 100%;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .button.header {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 940px) {
+  .hero-quote {
+    padding: 0px 60px;
+  }
+}
+
+@media (max-width: 649px) {
+  .letters.P {
+    right: -30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .letters.P {
+    display: none;
+  }
+
+  .navbar {
+    margin: 0px;
+  }
+
+  .hero-1 {
+    justify-content: flex-start;
+    height: fit-content;
+  }
+
+  .hero-quote {
+    position: unset;
+    margin-top: 30px;
+    padding: 0px 25px;
+  }
+
+  .hero-quote h2 {
+    font-size: 50px;
+    line-height: 40px;
+  }
+}
+
+
+
 /* Top Currencies */
 .currencies-container {
   width: 100%;
   margin: 100px 0px 80px;
   display: flex;
-  align-items: flex-end;
   justify-content: center;
 }
-.content-box1 h2 {
+
+.currencies-container h2 {
+  width: fit-content;
   font-size: 50px;
-  margin-bottom: 10px;
 }
 
-.top-3-container {
+.content-box {
   display: flex;
+}
+
+.left-align {
+  width: fit-content;
 }
 
 .top-3 {
@@ -226,7 +389,8 @@ h2 {
   font-size: 15px;
 }
 
-.content-box2 {
+.top-1 {
+  margin-top: -80px;
   position: relative;
   width: 300px;
   height: 380px;
@@ -238,11 +402,10 @@ h2 {
   font-size: 15px;
   font-family: Montserrat;
   box-shadow: 1px 1px 20px rgb(60, 60, 61), inset -1px 1px 10px rgb(60, 60, 61);
-  transition: ease-in .5s;
   cursor: pointer;
 }
 
-.content-box2::before {
+.top-1::before {
   content: '';
   left: -3px;
   top: -3px;
@@ -258,10 +421,10 @@ h2 {
   border: 3px solid transparent;
 }
 
-.content-box2 h2 {
+.top-1 h2 {
   margin: 0px 0px 20px;
   font-size: 50px;
-  background: -webkit-linear-gradient( rgb(90, 25, 121), rgb(53, 79, 210));
+  background: -webkit-linear-gradient(rgb(90, 25, 121), rgb(53, 79, 210));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -283,7 +446,7 @@ h2 {
   background-color: rgb(26, 21, 34);
 }
 
-.content-box2 p {
+.top-1 p {
   margin: 10px 0px;
   font-size: 32px;
   position: absolute;
@@ -291,17 +454,259 @@ h2 {
   left: 130px;
 }
 
-.content-box2 h3 {
+.top-1 h3 {
   margin: 40px 0px 0px;
   font-size: 40px;
 }
 
-.content-box2 h5 {
+.top-1 h5 {
   margin: 8px 0px 0px;
   color: rgb(86, 178, 5);
   font-size: 20px;
 }
 
+@media (max-width: 1051px) {
+  .top-3 {
+    width: 160px;
+    height: 170px;
+  }
+
+  .icon-logo-container {
+    height: 30px;
+    width: 30px;
+  }
+
+  #tether-icon,
+  #ethereum-icon {
+    height: 25px;
+  }
+
+  .top-3 p {
+    font-size: 15px;
+  }
+
+  .top-3 h3 {
+    font-size: 25px;
+    margin-top: 5px;
+  }
+
+  .top-3 h5 {
+    font-size: 11px;
+    margin-top: 2px;
+  }
+
+  .top-1 {
+    height: 300px;
+    width: 250px;
+  }
+
+  .top-1 h2 {
+    font-size: 40px;
+  }
+
+  .bitcoin-logo-container {
+    width: 40px;
+    height: 40px;
+  }
+
+  #bitcoin-icon {
+    height: 35px;
+  }
+
+  .top-1 p {
+    font-size: 23px;
+    left: 100px;
+    top: 120px;
+  }
+
+  .top-1 h3 {
+    margin-top: 30px;
+    font-size: 33px;
+  }
+
+  .top-1 h5 {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 838px) {
+  .currencies-container {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .left-align {
+    width: 100%;
+    padding: 0px 60px;
+  }
+
+  .content-box {
+    width: 100%;
+    height: auto;
+    flex-direction: column-reverse;
+  }
+
+  .top-1 {
+    position: relative;
+    margin: 0px 0px 20px 0px;
+    width: 100%;
+    height: 125px;
+    padding: 25px 0px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+
+  .bitcoin-logo-container {
+    height: 30px;
+    width: 30px;
+  }
+
+  #bitcoin-logo {
+    height: 25px;
+  }
+
+  .top-1 h2 {
+    position: absolute;
+    top: 25px;
+  }
+
+  .top-1 p {
+    position: unset;
+    margin-left: 25px;
+    font-size: 15px;
+  }
+
+  .top-1 h3 {
+    padding-bottom: 5px;
+    margin-left: 90px;
+    font-size: 25px;
+  }
+
+  .top-1 h5 {
+    margin: 0px 0px 11px 7px;
+    font-size: 11px;
+  }
+
+  .top-3 {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    padding: 25px 0px;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+
+  .top-3 p,
+  .top-3 h3,
+  .top-3 h5,
+  .top-1 h2,
+  .icon-logo-container,
+  .bitcoin-logo-container {
+    margin: 0px;
+    margin-left: 25px;
+  }
+
+  .top-3 h3 {
+    margin-left: 70px;
+  }
+
+  #tether-mob {
+    margin-left: 100px;
+  }
+
+  .top-3 h5 {
+    margin: 11px 0px 0px 10px;
+  }
+
+  .letters.G {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .top-1 {
+    flex-direction: column;
+    align-items: flex-start;
+    height: fit-content;
+  }
+
+  .top-1 h2 {
+    position: unset;
+    font-size: 40px;
+  }
+
+  .bitcoin-logo-container {
+    width: 40px;
+    height: 40px;
+  }
+
+  #bitcoin-icon {
+    height: 35px;
+  }
+
+  .top-1 p {
+    position: absolute;
+    font-size: 23px;
+    left: 80px;
+    top: 90px;
+  }
+
+  .top-1 h3 {
+    margin: 30px 0px 0px 25px;
+    font-size: 33px;
+  }
+
+  .top-1 h5 {
+    font-size: 15px;
+    margin-left: 25px;
+  }
+
+  .top-3 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icon-logo-container {
+    margin: 0px;
+  }
+
+  .top-3 p {
+    margin: 10px 0px;
+    font-size: 15px;
+  }
+  
+  .top-3 h3 {
+    margin: 10px 0px 0px;
+    font-size: 25px;
+  }
+  
+  .top-3 h5 {
+    margin: 8px 0px 0px;
+    font-size: 11px;
+  }
+
+  #tether-mob {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .currencies-container {
+    margin-top: 100px;
+  }
+
+  .left-align {
+    padding: 0px 25px;
+  }
+
+  .left-align h2 {
+    margin-top: 0px;
+    line-height: 40px;
+  }
+}
 
 
 /* Currency Converter */
@@ -323,6 +728,9 @@ h2 {
 .input-container {
   display: flex;
   align-items: flex-end;
+  padding: 50px 180px;
+  border-radius: 30px;
+  background: linear-gradient(to top, rgba(39, 21, 51, 0.7), rgba(39, 14, 71, 0.001) 65%);
 }
 
 .input-box {
@@ -374,11 +782,84 @@ h2 {
   color: white;
 }
 
+@media screen and (max-width: 1154px) {
+  .letters.G {
+    right: -70px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .letters.G {
+    top: 800px;
+    right: -70px;
+  }
+
+  .input-container {
+    padding: 50px 90px
+  }
+
+  .input-value {
+    width: 280px;
+  }
+
+  .currency-options {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 725px) {
+  .input-container {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+  }
+
+  .currency-value {
+    margin-top: 0px;
+  }
+
+  .input-value {
+    width: 220px;
+  }
+
+  .currency-options {
+    margin-right: 0px;
+    width: 85px;
+  }
+
+  #convert-button {
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  .input-container {
+    background: none;
+    padding: 15px 25px 0px;
+  }
+}
+
+@media screen and (max-width: 386px) {
+  .input-container {
+    background: none;
+    padding: 15px 25px 0px;
+  }
+
+  .input-value {
+    width: 200px;
+  }
+
+  .currency-converter h2 {
+    font-size: 45px;
+  }
+}
 
 
 /* Footer */
 .navbar.footer {
-  margin: 0px 30px 0px 0px;
+  margin: 0px 150px 0px 0px;
   padding: 0px;
   width: fit-content;
 }
@@ -415,47 +896,46 @@ a {
 }
 
 
-
-
-
-/* Blurry Background */
-.glass-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
-  z-index: 3;
-  backdrop-filter: blur(3rem);
+@media screen and (max-width: 1082px) {
+  .letters.N {
+    display: none;
+  }
 }
 
-.ball-1,
-.ball-2, 
-.ball-3 {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  position: absolute;
-  z-index: 1;
+@media screen and (max-width: 805px) {
+  .navbar.footer {
+    margin-right: 60px;
+  }
+
+  .menu-items a {
+    margin-left: 35px;
+  }
 }
 
-.ball-1 {
-  top: -100px;
-  left: -100px;
-  background-color: #352b4c;
-}
+@media screen and (max-width: 642px) {
+  .menu-items {
+    display: none;
+  }
 
-.ball-2 {
-  height: 400px;
-  top: 500px;
-  right: -100px;
-  background-color: #3f1b48;
-}
+  .navbar.footer {
+    margin-right: 0px;
+  }
 
-.ball-3 {
-  width: 300px;
-  height: 400px;
-  bottom: 100px;
-  left: -100px;
-  background-color: #3f1b48;
+  .navbar.footer p {
+    font-size: 20px;
+  }
+
+  .poly-1 {
+    width: 15px;
+    height: 15px;
+  }
+
+  .poly-2 {
+    width: 9px;
+    height: 9px;
+  }
+
+  .footer {
+    padding: 25px 0px 10px;
+  }
 }

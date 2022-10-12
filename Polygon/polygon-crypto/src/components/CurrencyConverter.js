@@ -89,12 +89,6 @@ const CurrencyConverter = () => {
 
                 <div className="button" id="convert-button" onClick={convert}> <FontAwesomeIcon id="convert-icon" icon={faArrowRightArrowLeft} /></div>
                 </div>
-
-                {/* <div>
-                <div id="convertion-result">{result}</div>
-                <div id="exchange-rate">{exchangeRate}</div>
-            </div> */}
-
             </div>
 
 
