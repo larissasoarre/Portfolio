@@ -20,6 +20,26 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07030d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(60, 15, 82);
+  border-radius: 20px;
+}
+
+@supports (scrollbar-color: rgb(60, 15, 82) #07030d) {
+  * {
+    scrollbar-color: rgb(60, 15, 82) #07030d;
+    scrollbar-width: auto;
+  }
+}
+
 h2 {
   font-family: Teko;
 }
