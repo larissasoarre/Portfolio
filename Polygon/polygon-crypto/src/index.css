@@ -422,7 +422,6 @@ h2 {
   font-size: 15px;
   font-family: Montserrat;
   box-shadow: 1px 1px 20px rgb(60, 60, 61), inset -1px 1px 10px rgb(60, 60, 61);
-  cursor: pointer;
 }
 
 .top-1::before {
