@@ -1,17 +1,20 @@
-import React from 'react'
+import React from 'react';
 import Header from './components/Header';
 import CurrencyConverter from './components/CurrencyConverter';
 import TopCurrencies from './components/TopCurrencies';
 import Footer from './components/Footer';
-import {useEffect} from 'react';
-
-useEffect(() => {
-  document.title = "Polygon Crypto"
-}, [])
+import {Helmet} from "react-helmet";
 
 const App = () => {
   return (
+    
     <div className="container">
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>Polygon Crypto</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
+
       <div className="glass-container">
         <div className="page-content">
         <Header />
