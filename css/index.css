@@ -408,7 +408,8 @@ ul {
     padding-left: 30px;
 }
 
-.about-me-text-left p, .about-me-text-right p {
+.about-me-text-left p,
+.about-me-text-right p {
     margin: 0px 0px 20px;
 }
 
@@ -463,6 +464,7 @@ ul {
 #git {
     position: absolute;
     right: 50px;
+    top: 350px;
 }
 
 .skills {
@@ -487,10 +489,30 @@ ul {
     right: 80px;
 }
 
+#react {
+    position: absolute;
+    top: -50px;
+    right: 300px;
+}
+
+#php {
+    position: absolute;
+    top: 300px;
+    right: 300px;
+}
+
+#api {
+    position: absolute;
+    right: 50px;
+}
+
 #git span,
 #css span,
 #js span,
-#html span {
+#html span,
+#react span,
+#api span,
+#php span {
     box-shadow: inset 0 -35px var(--hightlight-color);
 }
 
@@ -573,17 +595,33 @@ ul {
         right: 80px;
     }
 
+    #react {
+        right: 250px;
+    }
+
+    #php {
+        top: 250px;
+        right: 250px;
+    }
+
+    #git {
+        top: 320px;
+    }
+
     #git span,
     #css span,
     #js span,
-    #html span {
+    #html span,
+    #react span,
+    #api span,
+    #php span {
         box-shadow: inset 0 -25px var(--hightlight-color);
     }
 }
 
-@media (max-width: 890px) {
+@media (max-width: 925px) {
     .skills-text {
-        max-width: 800px;
+        margin-top: 70px;
     }
 
     .skills h2 {
@@ -604,26 +642,63 @@ ul {
     #git span,
     #css span,
     #js span,
-    #html span {
+    #html span,
+    #react span,
+    #api span,
+    #php span {
         box-shadow: inset 0 -18px var(--hightlight-color);
     }
 
     .arrow-text {
         position: absolute;
-        top: 250px;
+        top: 280px;
         right: 200px;
+    }
+
+    #api {
+        right: 30px;
+    }
+
+    #css {
+        top: 30px;
+        right: 200px;
+    }
+
+    #js {
+        top: 110px;
+        right: 150px;
+    }
+
+    #html {
+        top: 180px;
+        right: 50px;
+    }
+
+    #react {
+        right: 190px;
+    }
+
+    #php {
+        top: 200px;
+        right: 250px;
+    }
+
+    #git {
+        top: 270px;
+        right: 30px;
     }
 }
 
-@media (max-width: 725px) {
+@media (max-width: 738px) {
     .skills-container {
         justify-content: center;
-        padding-top: 100px;
+        padding-top: 0px;
         padding: 50px 0px;
     }
 
     .skills-text {
         justify-content: center;
+        margin-top: 0px;
     }
 
     .skills-img {
@@ -648,14 +723,15 @@ ul {
     .skill-set {
         display: block;
         font-family: RealTime;
+        font-size: 40px;
     }
 
     .skill-set span {
-        box-shadow: inset 0 -9px var(--hightlight-color);
+        box-shadow: inset 0 -15px var(--hightlight-color);
     }
 
     .fa-solid.fa-arrow-right-long {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .arrow-text {
@@ -683,6 +759,10 @@ ul {
         padding: 0px 0px;
         width: 100%;
         display: flex;
+    }
+
+    .skill-set {
+        font-size: 30px;
     }
 }
 
