@@ -65,7 +65,7 @@ function scrollRotate() {
 const swiper = new Swiper(".mySwiper", {
     breakpoints: {
         0: {
-            slidesPerView: 1,
+            slidesPerView: 1
         },
     
         730: {
@@ -73,7 +73,7 @@ const swiper = new Swiper(".mySwiper", {
         },
     
         1050: {
-            slidesPerView: 3,
+            slidesPerView: 3
         },
     },
     spaceBetween: 0,

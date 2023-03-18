@@ -877,8 +877,6 @@ ul {
 
 .swiper-wrapper {
     width: 100%;
-    display: flex;
-    justify-content: center;
     padding: 60px 0px;
 }
 
@@ -895,9 +893,14 @@ ul {
     background-color: var(--hightlight-color) !important;
 }
 
-@media (min-width: 1026px) {
+@media (min-width: 1050px) {
     #projects-title h2 {
         padding-top: 100px;
+    }
+
+    .swiper-wrapper {
+        display: flex;
+        justify-content: center;
     }
 }
 
