@@ -30,8 +30,8 @@ window.onload = function () {
     })
 
     menuButton.addEventListener('click', function () {
-            mobileMenu.classList.remove('toggle-back');
-            menuButton.classList.toggle('is-active');
+        mobileMenu.classList.remove('toggle-back');
+        menuButton.classList.toggle('is-active');
     })
 
 }
@@ -63,33 +63,23 @@ function scrollRotate() {
 
 //   Web Slider
 const swiper = new Swiper(".mySwiper", {
-    // slidesPerView: 3,
-    spaceBetween: 0,
     breakpoints: {
         0: {
             slidesPerView: 1,
-            slidesPerGroup: 1
         },
-
-        755: {
+    
+        730: {
             slidesPerView: 2,
-            slidesPerGroup: 2
         },
-
-        1026: {
+    
+        1050: {
             slidesPerView: 3,
-            slidesPerGroup: 3
         },
     },
-    loop: true,
-    loopFillGroupWithBlank: true,
+    spaceBetween: 0,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
     },
 });
 
