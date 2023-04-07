@@ -1,7 +1,9 @@
 const botaoInicial = document.getElementById('start-btn')
 const popUp = document.getElementById('pop-up')
+const popUpWrong = document.getElementById('pop-up-wrong')
 const perguntaContainer = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
+const tryAgainBtn = document.getElementById('try-again-button')
 const respostaBotao = document.getElementById('answer-buttons')
 const reiniciarBotao = document.getElementById('restart')
 const startContainer = document.getElementById('start-container')
@@ -57,7 +59,25 @@ function redefinirStatus() {
   }
 }
 
-//Seleção da reposta correta
+// Seleção da reposta correta
+// function selecionarResposta(e) {
+//   const selectedButton = e.target
+//   const correct = selectedButton.dataset.correct
+//   setStatusClass(document.body, correct)
+//   Array.from(respostaBotao.children).forEach(button => {
+//     setStatusClass(button, button.dataset.correct)
+//   })
+//   if (perguntasEmbaralhadas.length > perguntaAtual + 1) {
+//     popUp.classList.remove('hide')
+//   } else {
+//     reiniciarBotao.addEventListener('click', comecarJogo)
+//     reiniciarBotao.classList.remove('hidden')
+//     reiniciarBotao.addEventListener('click', function() {
+//       reiniciarBotao.classList.add('hidden')
+//     })
+//   }
+// }
+
 function selecionarResposta(e) {
   const selectedButton = e.target
   const correct = selectedButton.dataset.correct
@@ -65,16 +85,22 @@ function selecionarResposta(e) {
   Array.from(respostaBotao.children).forEach(button => {
     setStatusClass(button, button.dataset.correct)
   })
-  if (perguntasEmbaralhadas.length > perguntaAtual + 1) {
-    popUp.classList.remove('hide')
+  if (correct) {
+    if (perguntasEmbaralhadas.length > perguntaAtual + 1) {
+      popUp.classList.remove('hide')
+    } else {
+      reiniciarBotao.addEventListener('click', comecarJogo)
+      reiniciarBotao.classList.remove('hidden')
+      reiniciarBotao.addEventListener('click', function() {
+        reiniciarBotao.classList.add('hidden')
+      })
+    }
   } else {
-    reiniciarBotao.addEventListener('click', comecarJogo)
-    reiniciarBotao.classList.remove('hidden')
-    reiniciarBotao.addEventListener('click', function() {
-      reiniciarBotao.classList.add('hidden')
-    })
+    tryAgainBtn.addEventListener('click', comecarJogo)
+    popUpWrong.classList.remove('hidden')
   }
 }
+
 
 //Adição de estilo para os botões
 function setStatusClass(element, correct) {
