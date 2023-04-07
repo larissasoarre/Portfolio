@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Netflix Survey</title>
+</head>
+
+<body>
+    <img id="logonetflix" src="img/logonetflix.png" alt="">
+    <p id="description">Thank you for taking the time to help us improve our platform!</p>
+
+    <form id="survey-form" method="post" action="">
+        <fieldset class="block-1">
+            <label class="question" id="name-label" for="name">Name:<span>*</span></label>
+            <input required id="name" name="name" type="text" placeholder="Ex: John Smith">
+
+            <label class="question" id="email-label" for="email">E-mail:<span>*</span></label>
+            <input required type="email" name="email" id="email" placeholder="Ex: johnsmith@myemail.com">
+
+            <label class="question" id="number-label" for="age">Age:<span>*</span></label>
+            <input required min="13" max="120" type="number" name="number" id="number" placeholder="Ex: 23">
+        </fieldset>
+
+        <fieldset class="block-2">
+            <label class="question" for="hour-dropdown">How much time to you spend watching Netflix per week?<span>*</span></label>
+            <select required name="hour-dropdown" id="dropdown">
+                <option hidden value="">Select and option</option>
+                <option value="1">Less than 3 hours</option>
+                <option value="2">Between 3 and 7 hours</option>
+                <option value="3">More than 7 hours</option>
+            </select>
+        </fieldset>
+
+        <fieldset class="block-3">
+            <p class="question">How would you are your satisfaction with the selection of movies avaiable to watch on
+                Netflix?</p>
+            <label for="not-satisfied">
+                <input id="not-satisfied" name="satisfaction" type="radio" value="not-satisfied">
+                Not satisfied at all
+            </label>
+            <label for="mildly-dissatisfied">
+                <input id="mildly-dissatisfied" name="satisfaction" type="radio" value="mildly-dissatisfied">
+                Mildly dissatisfied
+            </label>
+            <label for="somewhat-satisfied">
+                <input id="somewhat-satisfied" name="satisfaction" type="radio" value="somewhat-satisfied">
+                Somewhat satisfied
+            </label>
+            <label for="very-satisfied">
+                <input id="very-satisfied" name="satisfaction" type="radio" value="very-satisfied">
+                Very satisfied
+            </label>
+            <label for="extremely-satisfied">
+                <input id="extremely-satisfied" name="satisfaction" type="radio" value="extremely-satisfied">
+                Extremely satisfied
+            </label>
+        </fieldset>
+
+        <fieldset class="block-4">
+            <p class="question">Which of the following devices do you use to watch Netflix? (Select all that apply)</p>
+            <label for="checkbox-smart-tv">
+                <input name="device" id="checkbox-smart-tv" type="checkbox" value="smart-tv">
+                Smart TV
+            </label>
+            <label for="checkbox-laptop-computer">
+                <input name="device" id="checkbox-laptop-computer" type="checkbox" value="laptop-computer">
+                Laptop/Computer
+            </label>
+            <label for="checkbox-tablet">
+                <input name="device" id="checkbox-tablet" type="checkbox" value="tablet">
+                Tablet
+            </label>
+            <label for="checkbox-smartphone">
+                <input name="device" id="checkbox-smartphone" type="checkbox" value="smartphone">
+                Smartphone
+            </label>
+            <label for="checkbox-game-console">
+                <input name="device" id="checkbox-game-console" type="checkbox" value="game-console">
+                Game console
+            </label>
+            <label for="checkbox-streaming-player">
+                <input name="device" id="checkbox-streaming-player" type="checkbox" value="streaming-player">
+                Streaming media player (e.g. Roku, Apple TV)
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <label class="question" for="">Is there any particular show or movie that you would like to see added to the
+                Netflix library? Please provide your suggestion and any additional comments or feedback about the
+                content available on Netflix below.<span>*</span></label>
+            <textarea required name="" id="" cols="30" rows="10"></textarea>
+        </fieldset>
+        
+        <p id="required-field"><span>*</span>Required fields</p>
+
+        <input id="submit" type="submit" value="Submit">
+</body>
+
+</html>
