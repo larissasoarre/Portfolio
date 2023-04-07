@@ -14,6 +14,20 @@
 
 }
 
+:root {
+    --primary-color: #000;
+    --secondary-color: #fff;
+    --hightlight-color: rgb(255, 140, 40);
+    --scrollbar-background: rgb(28, 28, 28);
+}
+
+.inverted-theme {
+    --primary-color: #fff;
+    --secondary-color: #000;
+    --hightlight-color: #17aac8;
+    --scrollbar-background: #d8dfe0;
+}
+
 body {
     max-width: 1355px;
     margin: 0 auto !important;
@@ -43,20 +57,6 @@ ul {
     list-style-type: none;
     margin: 0px;
     padding: 0px;
-}
-
-:root {
-    --primary-color: #000;
-    --secondary-color: #fff;
-    --hightlight-color: rgb(255, 140, 40);
-    --scrollbar-background: rgb(28, 28, 28);
-}
-
-.inverted-theme {
-    --primary-color: #fff;
-    --secondary-color: #000;
-    --hightlight-color: #17aac8;
-    --scrollbar-background: #d8dfe0;
 }
 
 /* ---- SCROLLBAR ---- */

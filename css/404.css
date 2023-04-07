@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400&display=swap');
+
+@font-face {
+    font-family: 'Realtime';
+    src: url('../fonts/realtimedemo-regular-webfont.woff2') format('woff2'),
+        url('../fonts/realtimedemo-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --primary-color: #000;
+    --secondary-color: #fff;
+    --hightlight-color: rgb(255, 140, 40);
+    --scrollbar-background: rgb(28, 28, 28);
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: 'Source Code Pro', sans-serif;
+    color: var(--secondary-color);
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#sad-face {
+    font-size: 100px;
+    color: var(--hightlight-color);
+}
+
+h1, h2 {
+    font-family: Realtime, sans-serif;
+}
+
+h1 {
+    margin: 20px 0 5px;
+}
+
+p {
+    margin: 30px 0px;
+    font-size: 15px;
+}
+
+.button {
+    background-color: var(--hightlight-color);
+    width: 100px;
+    padding: 5px 0px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--primary-color);
+    border-radius: 5px;
+    text-transform: uppercase;
+}
