@@ -1,0 +1,96 @@
+main h1 {
+    color: var(--hightlight-color);
+    text-align: center;
+    margin: 50px 0px 60px;
+    font-size: 2.7em;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+main h2 {
+    font-size: 2em;
+}
+
+.project-overview {
+    display: flex;
+    margin: 0 3% 10%;
+}
+
+.img-container {
+    width: 50%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: solid 2px var(--hightlight-color);
+    box-shadow: 7px 7px var(--hightlight-color);
+}
+
+.img-container img {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.text-area {
+    width: 50%;
+    box-sizing: border-box;
+    padding-left: 50px;
+}
+
+.text-area a {
+    box-shadow: inset 0 -4px var(--hightlight-color);
+    transition: ease-in-out .3s;
+}
+.text-area a:hover {
+    box-shadow: inset 0 -8px var(--hightlight-color);
+}
+
+.project-page-button {
+    font-family: Source Code Pro;
+    text-transform: uppercase;
+    padding: 7px 10px;
+    background-color: var(--primary-color);
+    border: solid 1px var(--hightlight-color);
+    border-radius: 5px;
+    color: var(--hightlight-color);
+    transition: ease-in-out .3s;
+}
+
+.project-page-button:hover {
+    background-color: var(--hightlight-color);
+    color: var(--primary-color);
+}
+
+@media (max-width: 842px) {
+    main h1 {
+        margin: 20px 0px 20px;
+        font-size: 2em;
+    }
+
+    main h2 {
+        font-size: 1.6em;
+    }
+
+    .project-overview {
+        display: block;
+        margin: 0 6% 10%;
+    }
+
+    .img-container {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .text-area {
+        width: 100%;
+        padding: 50px 0 0;
+    }
+}
+
+@media (max-width: 387px) {
+    main h1 {
+        font-size: 1.6em;
+    }
+}
