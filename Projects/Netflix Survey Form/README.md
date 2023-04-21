@@ -1,6 +1,8 @@
 # Netflix Survey Form
 This is a simple survey form built with HTML and CSS as part of the [freeCodeCamp](https://www.freecodecamp.org/) curriculum for the Responsive Web Design Certification. The survey form is designed to gather feedback from users about their experience with the Netflix streaming service.
 
+Check out the live project [here](https://larissasoares.com/projects/netflix%20survey%20form/)!
+
 ## ✨ Features
 The survey form includes the following features:
 * A variety of input fields to collect different types of feedback, such as multiple choice questions, text fields, and dropdown menus.
