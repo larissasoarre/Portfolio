@@ -1,6 +1,7 @@
 # Nutrition Facts Label
 This is a simple  nutrition label built with HTML and CSS as part of the [freeCodeCamp](https://www.freecodecamp.org/) curriculum for the Responsive Web Design Certification. The goal was to practice using typography to style text and adjust line heights to make it easy to read and suit its purpose. After completing the requirements of the project,  I added a personal touch to make the webpage more appealing and better aligned with my style.
 
+You can see the project like [here](https://larissasoares.com/projects/nutrition%facts%20label/)
 
 ## ✨ Features
 The nutrition label includes the following features:
@@ -12,7 +13,7 @@ The nutrition label includes the following features:
 ## ⚙️ Instalation
 To install the project, you have to:
 
-1. Fork the project from [this repository](https://github.com/larissasoarre/NutritionLabel).
+1. Fork the project from [this repository](https://github.com/larissasoarre/NutritionFactsLabel).
 2. Clone the forked repository to your local machine using the command 'git clone'.
 3. Open the index.html file in your web browser.
 
