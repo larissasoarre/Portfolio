@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://kit.fontawesome.com/84b7e13fbc.js" crossorigin="anonymous"></script>
+    <title>Markdown Guide</title>
+</head>
+
+<body>
+    <header class="top-logo">Markdown <span>Guide</span></header>
+
+    <section id="page-content">
+        <nav id="navbar">
+            <header>
+                <p>Table Of Content</p>
+            </header>
+            <ul>
+                <a href="#What_is_Markdown?" class="nav-link"><li><i class="fa-brands fa-markdown"></i>What is
+                        Markdown?</li></a>
+                <a href="#Headings" class="nav-link"><li><i class="fa-solid fa-heading"></i>Headings</li></a>
+                <a href="#Paragraphs" class="nav-link"><li><i class="fa-solid fa-paragraph"></i>Paragraphs</li></a>
+                <a href="#Line_Breaks" class="nav-link"><li><i class="fa-solid fa-lines-leaning"></i>Line Breaks</li></a>
+                <a href="#Emphasis" class="nav-link"><li><i class="fa-solid fa-underline"></i>Emphasis</li></a>
+                <a href="#Blockquotes" class="nav-link"><li><i class="fa-solid fa-quote-left"></i>Blockquotes</li></a>
+                <a href="#Lists" class="nav-link"><li><i class="fa-solid fa-list-ul"></i>Lists</li></a>
+                <a href="#Code" class="nav-link"><li><i class="fa-solid fa-code"></i>Code</li></a>
+                <a href="#Horizontal_Rules" class="nav-link"><li><i class="fa-solid fa-grip-lines"></i>Horizontal Rules</li></a>
+                <a href="#Links" class="nav-link"><li><i class="fa-solid fa-link"></i>Links</li></a>
+                <a href="#Images" class="nav-link"><li><i class="fa-regular fa-images"></i>Images</li></a>
+                <a href="#Escaping_Characters" class="nav-link"><li><i class="fa-regular fa-keyboard"></i>Escaping Characters</li></a>
+                <a href="#HTML" class="nav-link"><li><i class="fa-brands fa-html5"></i>HTML</a></li>
+            </ul>
+        </nav>
+
+        <main id="main-doc">
+            <section class="main-section" id="What_is_Markdown?">
+                <header class="section-title">
+                    <h1>What is Markdown?</h1>
+                </header>
+                <p>Markdown is a markup language that is known for its simplicity and ability to convert text into HTML easily. In 2004, John Gruber and Aaron Swartz developed this language as a way to write content in a readable and straightforward format that could later be converted into HTML.</p> <br>
+                <p>Markdown has become popular for creating web content, such as blog posts, README files, and documentation. With its straightforward syntax for headings, lists, links, and other formatting elements, it allows writers to format their content using simple, plain text without needing to write HTML code directly.</p>
+            </section>
+
+            <section class="main-section" id="Headings">
+                <header class="section-title">
+                    <h1>Headings</h1>
+                </header>
+                <p>You can use the hash symbol <code class="inline-code">#</code> in Markdown to format a heading. The number of hash symbols you use at the beginning of a line indicates the heading level. For instance, to create a level-three heading <code class="inline-code">&lt;h3&gt;</code>, add three hash symbols before the text <code class="inline-code">e.g., ### Heading</code>.</p>
+
+                <div class="example-code">
+                    <pre class="block-code">
+                    <code>
+# Heading level 1
+## Heading level 2
+### Heading level 3
+#### Heading level 4
+##### Heading level 5
+###### Heading level 6
+                    </code>
+                </pre>
+                </div>
+
+                <div class="example-output">
+                    <div class="output-top-bar">
+                        <p>Output</p>
+                        <div class="menu">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                    <div class="output-content">
+                        <h1>Heading level 1</h1>
+                        <h2>Heading level 2</h2>
+                        <h3>Heading level 3</h3>
+                        <h4>Heading level 4</h4>
+                        <h5>Heading level 5</h5>
+                        <h6>Heading level 6</h6>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main-section" id="Paragraphs">
+                <header class="section-title">
+                    <h1>Paragraphs</h1>
+                </header>
+                <p>To create paragraphs, use a blank line to separate one or more lines of text.</p>
+
+                <div class="example-code">
+                    <pre class="block-code">
+                    <code>
+I love using Markdown to jazz up my text!
+
+I think I'll use it to create my README file.
+                    </code>
+                </pre>
+                </div>
+
+                <div class="example-output">
+                    <div class="output-top-bar">
+                        <p>Output</p>
+                        <div class="menu">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                    <div class="output-content">
+                        <p>I really like using Markdown.</p>
+                        <p>I think I'll use it to format my README file.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main-section" id="Line_Breaks">
+                <header class="section-title">
+                    <h1>Line Breaks</h1>
+                </header>
+                <p>To create a line break <code class="inline-code">&lt;br&gt;</code>, simply add two or more spaces at the end of a line and then press the return key. This will create a new line without starting a new paragraph.</p>
+
+                <div class="example-code">
+                    <pre class="block-code">
+                    <code>
+This is the first line.
+And this is the second line.
+                    </code>
+                </pre>
+                </div>
+
+                <div class="example-output">
+                    <div class="output-top-bar">
+                        <p>Output</p>
+                        <div class="menu">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                    <div class="output-content">
+                        <p>This is the first line.<br>
+                            And this is the second line.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main-section" id="Emphasis">
+                <header class="section-title">
+                    <h1>Emphasis</h1>
+                </header>
+                <p>In Markdown, you can emphasize text by making it bold or italic. </p>
+
+                <div class="sub-section">
+                    <h2>Bold</h2>
+                    <p>If you want to make text bold, simply enclose the word or phrase with two <code class="inline-code">*</code> or <code class="inline-code">_</code> before and after it. You can also add emphasis to a specific part of a word by enclosing it with two asterisks without spaces around the letters. It's a straightforward way to add emphasis and highlight important text.</p>
+                    <div class="example-code">
+                        <pre class="block-code">
+                        <code>
+**Boldness** is an essential quality to have.
+__Bold text__ is just so great!.
+When it comes to text, love and **bold**ness go hand in hand.
+                        </code>
+                    </pre>
+                    </div>
+
+                    <div class="example-output">
+                        <div class="output-top-bar">
+                            <p>Output</p>
+                            <div class="menu">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <div class="output-content">
+                            <p><strong>Boldness</strong> is an essential quality to have.</p>
+                            <p><strong>Bold text</strong> is just so great!.</p>
+                            <p>When it comes to text, love and <strong>bold</strong>ness go hand in hand.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-section">
+                    <h2>Italic</h2>
+                    <p>To italicize text, enclose the word or phrase with one <code class="inline-code">*</code> or <code class="inline-code">_</code> before and after it. If you want to emphasize a particular part of a word, you can enclose it with one asterisk without spaces around the letters.</p>
+                    <div class="example-code">
+                        <pre class="block-code">
+                        <code>
+I think *italicized* text is just the best!
+_Italicized_ text is cool.
+*Ital*ics make text pop.
+                        </code>
+                    </pre>
+                    </div>
+
+                    <div class="example-output">
+                        <div class="output-top-bar">
+                            <p>Output</p>
+                            <div class="menu">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <div class="output-content">
+                            <p>I think <em>italicized</em> text is just the best!</p>
+                            <p><em>Italicized</em> text is cool.</p>
+                            <p><em>Ital</em>ics make text pop.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-section">
+                    <h2>Bold and Italic</h2>
+                    <p>To give text extra emphasis, you can make it bold and italicized at the same time by adding three asterisks or underscores before and after the word or phrase. If you want to bold and italicize a part of a word, simply add three asterisks without any spaces around the letters you want to emphasize.</p>
+                    <div class="example-code">
+                        <pre class="block-code">
+                    <code>
+***Bold and italicized*** is the ultimate combo.
+When in doubt, use ___bold and italicized___.
+__*Bold and italicized*__ is the power move.
+Two words: **_bold and italicized_**.
+Never underestimate bold***and***italicized.
+                    </code>
+                </pre>
+                    </div>
+
+                    <div class="example-output">
+                        <div class="output-top-bar">
+                            <p>Output</p>
+                            <div class="menu">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <div class="output-content">
+                            <p><strong><em>Bold and italicized</em></strong> is the ultimate combo.</p>
+                            <p>When in doubt, use <strong><em>bold and italicized</em></strong>.</p>
+                            <p><strong><em>Bold and italicized</em></strong> is the power move.</p>
+                            <p>Two words: <strong><em>bold and italicized</em></strong>.</p>
+                            <p>Never underestimate bold<strong><em>and</em></strong>italicized.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main-section" id="Blockquotes">
+                <header class="section-title">
+                    <h1>Blockquotes</h1>
+                </header>
+                <p>To create a blockquote, add a <code class="inline-code">></code> in front of a paragraph.</p>
+
+                <div class="example-code">
+                    <pre class="block-code">
+                    <code>
+> After a long day at work, she likes to unwind by taking a hot bath and reading a good book while sipping on a cup of tea.
+                    </code>
+                </pre>
+                </div>
+
+                <div class="example-output">
+                    <div class="output-top-bar">
+                        <p>Output</p>
+                        <div class="menu">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                    <div class="output-content">
+                        <p>The rendered output looks like this:</p>
+                        <blockquote>
+                            <p>After a long day at work, she likes to unwind by taking a hot bath and reading a good book while sipping on a cup of tea.</p>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <div class="sub-section">
+                    <h2>Blockquotes with Multiple Paragraphs</h2>
+                    <p>To include multiple paragraphs in a blockquote, simply insert a <code class="inline-code">></code> symbol on the blank line between each paragraph.</p>
+                    <div class="example-code">
+                        <pre class="block-code">
+                    <code>
+> After a long day at work, she likes to unwind by taking a hot bath and reading a good book while sipping on a cup of tea.
+>
+> She finds that this routine helps her to relax and forget about the stresses of the day. 
+                    </code>
+                </pre>
+                    </div>
+
+                    <div class="example-output">
+                        <div class="output-top-bar">
+                            <p>Output</p>
+                            <div class="menu">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <div class="output-content">
+                            <p>The rendered output looks like this:</p>
+                            <blockquote>
+                                <p>After a long day at work, she likes to unwind by taking a hot bath and reading a good book while sipping on a cup of tea.</p> <br>
+                                <p>She finds that this routine helps her to relax and forget about the stresses of the day.</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-section">
+                    <h2>Nested Blockquotes</h2>
+                    <p>Blockquotes can be nested. Add a <code class="inline-code">>></code> in front of the paragraph
+                        you
+                        want to nest.</p>
+                    <div class="example-code">
+                        <pre class="block-code">
+                    <code>
+> After a long day at work, she likes to unwind by taking a hot bath and reading a good book while sipping on a cup of tea.
+>
+>> She finds that this routine helps her to relax and forget about the stresses of the day.
+                    </code>
+                </pre>
+                    </div>
+
+                    <div class="example-output">
+                        <div class="output-top-bar">
+                            <p>Output</p>
+                            <div class="menu">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <div class="output-content">
+                            <p>The rendered output looks like this:</p>
+                            <blockquote>
+                                <p>After a long day at work, she likes to unwind by taking a hot bath and reading a good book while sipping on a cup of tea.</p>
+                                <blockquote>
+                                    <p>She finds that this routine helps her to relax and forget about the stresses of the day.</p>
+                                </blockquote>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-section">
+                    <h2>Blockquotes with Other Elements</h2>
+                    <p>Markdown-formatted elements can be included in blockquotes. However, not all elements can be used and experimentation may be necessary to determine which ones are compatible.</p>
+                    <div class="example-code">
+                        <pre class="block-code">
+                    <code>
+> #### My favorite hobbies
+>
+> - Playing video games
+> - Reading books
+> - Listening to music
+>
+> I love spending my free time doing **fun** activities!   
+                    </code>
+                </pre>
+                    </div>
+
+                    <div class="example-output">
+                        <div class="output-top-bar">
+                            <p>Output</p>
+                            <div class="menu">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <div class="output-content">
+                            <p>The rendered output looks like this:</p>
+                            <blockquote>
+                                <h4>My favorite hobbies</h4> <br>
+                                <ul>
+                                    <li>Playing video games</li>
+                                    <li>Reading books</li>
+                                    <li>Listening to music</li>
+                                </ul> <br>
+                                <p>I love spending my free time doing <strong>fun</strong> activities!</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="main-section" id="Lists">
+                <header class="section-title">
+                    <h1>Lists</h1>
+                </header>
+                <p>You can organize items into ordered and unordered lists.</p>
+
+                <div class="sub-section">
+                    <h2>Ordered Lists</h2>
+                    <p>Start an ordered list by adding line items with numbers followed by periods. The order of the numbers doesn't have to be numerical, but the list should start with number one.</p>
+                    <div class="example-code">
+                        <pre class="block-code">
+                    <code>
+1. Item one
+2. Item two
+3. Item three
+4. Item four
+
+1. Item one
+7. Item two
+3. Item three
+9. Item four
+                    </code>
+                </pre>
+                    </div>
+
+                    <div class="example-output">
+                        <div class="output-top-bar">
+                            <p>Output</p>
+                            <div class="menu">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <div class="output-content">
+                            <ol>
+                                <li>Item one</li>
+                                <li>Item two</li>
+                                <li>Item three</li>
+                                <li>Item four</li>
+                            </ol>
+                            <br>
+                            <ol>
+                                <li>Item one</li>
+                                <li>Item two</li>
+                                <li>Item three</li>
+                                <li>Item four</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-section">
+                    <h2>Unordered Lists</h2>
+                    <p>You can make an unordered list in Markdown by using dashes <code class="inline-code">-</code>, asterisks <code
+                            class="inline-code">*</code>, or plus signs
+                        <code class="inline-code">+</code> in front of line items.
+                    </p>
+                    <div class="example-code">
+                        <pre class="block-code">
+                    <code>
+- Item one 
+- Item two
+- Item three
+- Item four
+
+* Item one 
+* Item two
+* Item three
+* Item four
+
++ Item one 
++ Item two
++ Item three
++ Item four
+
+- Item one 
+- Item two
+- Item three
+    - Indented item
+    - Indented item
+- Item four
+                    </code>
+                </pre>
+                    </div>
+
+                    <div class="example-output">
+                        <div class="output-top-bar">
+                            <p>Output</p>
+                            <div class="menu">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <div class="output-content">
+                            <ul>
+                                <li>Item one</li>
+                                <li>Item two</li>
+                                <li>Item three</li>
+                                <li>Item four</li>
+                            </ul>
+                            <br>
+                            <ul>
+                                <li>Item one</li>
+                                <li>Item two</li>
+                                <li>Item three</li>
+                                <li>Item four</li>
+                            </ul>
+                            <br>
+                            <ul>
+                                <li>Item one</li>
+                                <li>Item two</li>
+                                <li>Item three</li>
+                                <li>Item four</li>
+                            </ul>
+                            <br>
+                            <ul>
+                                <li>Item one</li>
+                                <li>Item two</li>
+                                <li>Item three
+                                    <ul>
+                                        <li>Indented item</li>
+                                        <li>Indented item</li>
+                                    </ul>
+                                </li>
+                                <li>Item four</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main-section" id="Code">
+                <header class="section-title">
+                    <h1>Code</h1>
+                </header>
+                <p>To denote a word or phrase as code, enclose it in backticks <code class="inline-code">`</code>.</p>
+
+                <div class="example-code">
+                    <pre class="block-code">
+                    <code>
+You can use the `for` loop in Python to iterate over a list or other iterable object.
+                    </code>
+                </pre>
+                </div>
+
+                <div class="example-output">
+                    <div class="output-top-bar">
+                        <p>Output</p>
+                        <div class="menu">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                    <div class="output-content">
+                        <p>You can use the <code class="inline-code">for</code> loop in Python to iterate over a list or other iterable object.</p>
+                    </div>
+                </div>
+
+                <div class="sub-section">
+                    <h2>Escaping Backticks</h2>
+                    <p>Enclose a word or phrase in double backticks <code class="inline-code">``</code> to indicate that it should be interpreted as code, even if it includes one or more backticks. This is known as escaping.</p>
+
+                    <div class="example-code">
+                        <pre class="block-code">
+                    <code>
+``Use `code` in your Markdown file.``
+                    </code>
+                </pre>
+                    </div>
+
+                    <div class="example-output">
+                        <div class="output-top-bar">
+                            <p>Output</p>
+                            <div class="menu">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <div class="output-content">
+                            <p>Use <code class="inline-code">code</code> in your Markdown file.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-section">
+                    <h2>Code Blocks</h2>
+                    <p>You can create a code block by either indenting every line of the block by at least four spaces or by using one tab.</p>
+
+                    <div class="example-code">
+                        <pre class="block-code">
+                    <code>
+function multiply(a, b) {
+  return a * b;
+}
+
+console.log(multiply(5, 7));
+                    </code>
+                </pre>
+                    </div>
+
+                    <div class="example-output">
+                        <div class="output-top-bar">
+                            <p>Output</p>
+                            <div class="menu">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <div class="output-content">
+                            <p>The rendered output looks like this:</p>
+                            <pre class="block-code">
+                                <code>
+function multiply(a, b) {
+  return a * b;
+}
+
+console.log(multiply(5, 7));
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main-section" id="Horizontal_Rules">
+                <header class="section-title">
+                    <h1>Horizontal Rules</h1>
+                </header>
+                <p> To create a horizontal rule, type three or more asterisks <code class="inline-code">***</code>,
+                    dashes <code class="inline-code">---</code>, or
+                    underscores <code class="inline-code">___</code> on a separate line.</p>
+
+                <div class="example-code">
+                    <pre class="block-code">
+                    <code>
+***
+---
+_________________
+                    </code>
+                </pre>
+                </div>
+
+                <div class="example-output">
+                    <div class="output-top-bar">
+                        <p>Output</p>
+                        <div class="menu">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                    <div class="output-content">
+                        <p>The rendered output of all three looks like this:</p>
+                        <hr>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main-section" id="Links">
+                <header class="section-title">
+                    <h1>Links</h1>
+                </header>
+                <p>To create a link, enclose the link text in brackets (e.g., <code class="inline-code">[Dublin
+                        Template]</code>) and then follow
+                    it immediately with the URL in parentheses (e.g., <code
+                        class="inline-code">(<span class="long-link">https://larissasoares.com/projects/dublin%20template/</span>)</code>).</p>
+
+                <div class="example-code">
+                    <pre class="block-code">
+<code>My favorite template is [Dublin Template](<span class="long-link">https://larissasoares.com/projects/dublin%20template/</span>).</code>
+                </pre>
+                </div>
+
+                <div class="example-output">
+                    <div class="output-top-bar">
+                        <p>Output</p>
+                        <div class="menu">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                    <div class="output-content">
+                        <p>The rendered output looks like this:</p>
+                        <br>
+                        <p>My favorite template is <a
+                                href="https://larissasoares.com/projects/dublin%20template/">Dublin Template</a>.</p>
+                    </div>
+                </div>
+
+                <div class="sub-section">
+                    <h2>Adding Titles</h2>
+                    <p>If you want to provide additional context to a link, you can add a title by enclosing it in quotation marks after the URL. This title will appear as a tooltip when the user hovers over the link.</p>
+
+                    <div class="example-code">
+                        <pre class="block-code">
+<code>My favorite template is [Dublin Template](<span class="long-link">https://larissasoares.com/projects/dublin%20template/</span> "The best template for your blog!").</code>
+                </pre>
+                    </div>
+
+                    <div class="example-output">
+                        <div class="output-top-bar">
+                            <p>Output</p>
+                            <div class="menu">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <div class="output-content">
+                            <p>The rendered output looks like this:</p>
+                            <br>
+                            <p>My favorite template is <a href="https://larissasoares.com/projects/dublin%20template/"
+                                    title="The best template for your blog!">Dublin Template</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-section">
+                    <h2>URLs and Email Addresses</h2>
+                    <p>By enclosing a URL or email address in angle brackets, you can convert it into a clickable link quickly.</p>
+
+                    <div class="example-code">
+                        <pre class="block-code">
+                    <code>
+&lt;<span class="long-link">https://www.larissasoares.com</span>&gt;
+&lt;<span class="long-link">email@example</span>.com&gt;
+                    </code>
+                </pre>
+                    </div>
+
+                    <div class="example-output">
+                        <div class="output-top-bar">
+                            <p>Output</p>
+                            <div class="menu">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <div class="output-content">
+                            <a href="https://www.larissasoares.com" class="long-link">https://www.larissasoares.com</a> <br>
+                            <a href="mailto:fake@example.com" class="long-link">email@example.com</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- REVIEW THE TEXT OF THIS SECTION -->
+                <div class="sub-section">
+                    <h2>Formatting Links</h2>
+                    <p>Links can be emphasized by adding asterisks before and after the brackets and parentheses. You can also denote links as code by adding backticks inside the brackets.</p>
+
+                    <div class="example-code">
+                        <pre class="block-code">
+                    <code>
+I need to check something on **[Google](https://google.com)**.
+This is the *[Markdown Guide](#)*.
+See the section on [`code`](#code).
+                    </code>
+                </pre>
+                    </div>
+
+                    <div class="example-output">
+                        <div class="output-top-bar">
+                            <p>Output</p>
+                            <div class="menu">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <div class="output-content">
+                            <p>I need to check something on <a href="https://eff.org"><strong>Google</strong></a>.</p>
+                            <p>This is the <a href="#"><em>Markdown Guide</em></a>.</p>
+                            <p>See the section on <code class="inline-code"><a href="#Code">code</a></code>.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main-section" id="Images">
+                <header class="section-title">
+                    <h1>Images</h1>
+                </header>
+                <p></p>One way to add an image in Markdown is by using an exclamation mark <code class="inline-code">!</code> followed by the alt text enclosed in square brackets, and the path or URL of the image enclosed in parentheses. A title can also be added as an optional attribute enclosed in quotation marks after the path or URL.</p>
+
+                <div class="example-code">
+                    <pre class="block-code">
+<code>![The Beaultiful Swiss Alps](<span class="long-link">https://images.unsplash.com/photo-1607585011081-241d2bacb7de?ixlib=rb-4.0.3ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3dpc3N8ZW58MHx8MHx8&w=1000&q=80</span>)</code>
+                </pre>
+                </div>
+
+                <div class="example-output">
+                    <div class="output-top-bar">
+                        <p>Output</p>
+                        <div class="menu">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                    <div class="output-content image">
+                        <img src="https://images.unsplash.com/photo-1607585011081-241d2bacb7de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3dpc3N8ZW58MHx8MHx8&w=1000&q=80"
+                            alt="The Beaultiful Swiss Alps">
+                    </div>
+                </div>
+            </section>
+
+            <section class="main-section" id="Escaping_Characters">
+                <header class="section-title">
+                    <h1>Escaping Characters</h1>
+                </header>
+                <p>Escape special characters in a Markdown document by placing a backslash <code class="inline-code">\</code> in front of the character to prevent it from being interpreted as formatting syntax.</p>
+
+                <div class="example-code">
+                    <pre class="block-code">
+<code>\* Without the backslash, this would be a bullet in an unordered list.</code>
+                </pre>
+                </div>
+
+                <div class="example-output">
+                    <div class="output-top-bar">
+                        <p>Output</p>
+                        <div class="menu">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                    <div class="output-content">
+                        <p>* Without the backslash, this would be a bullet in an unordered list.</p>
+                    </div>
+                </div>
+
+                <div class="sub-section">
+                    <h2>Characters You Can Escape</h2>
+                    <p>You can use a backslash to escape the following characters.</p>
+                    <table>
+                        <tr>
+                            <th class="different-left-top">Character</th>
+                            <th class="different-right-top">Name</th>
+                        </tr>
+                        <tr>
+                            <td>\</td>
+                            <td>backslash</td>
+                        </tr>
+                        <tr>
+                            <td>`</td>
+                            <td>backtick</td>
+                        </tr>
+                        <tr>
+                            <td>*</td>
+                            <td>asterisk</td>
+                        </tr>
+                        <tr>
+                            <td>_</td>
+                            <td>underscore</td>
+                        </tr>
+                        <tr>
+                            <td>{ }</td>
+                            <td>curly braces</td>
+                        </tr>
+                        <tr>
+                            <td>[ ]</td>
+                            <td>brackets</td>
+                        </tr>
+                        <tr>
+                            <td>&lt; &gt;</td>
+                            <td>angle brackets</td>
+                        </tr>
+                        <tr>
+                            <td>( )</td>
+                            <td>parentheses</td>
+                        </tr>
+                        <tr>
+                            <td>#</td>
+                            <td>pound sign</td>
+                        </tr>
+                        <tr>
+                            <td>+</td>
+                            <td>plus sign</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>minus sign (hyphen)</td>
+                        </tr>
+                        <tr>
+                            <td>.</td>
+                            <td>dot</td>
+                        </tr>
+                        <tr>
+                            <td>!</td>
+                            <td>exclamation mark</td>
+                        </tr>
+                        <tr>
+                            <td class="different-bottom-left">|</td>
+                            <td class="different-bottom-right">pipe</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+            <section class="main-section" id="HTML">
+                <header class="section-title">
+                    <h1>HTML</h1>
+                </header>
+                <p>You can use HTML tags in Markdown-formatted text in many Markdown applications. This feature comes in handy if you prefer specific HTML tags to Markdown syntax, such as using HTML tags for images, headings, code, and so on. It's also useful when you need to modify an element's attributes, such as changing the text color or adjusting an image's width.</p>
+                <p>To incorporate HTML tags into your Markdown-formatted file, simply include them in the text.</p>
+
+                <div class="example-code">
+                    <pre class="block-code">
+<code>This `word` is inline code. This &lt;h1&gt;word&lt;/h1&gt; is a level-one heading.</code>
+                </pre>
+                </div>
+
+                <div class="example-output">
+                    <div class="output-top-bar">
+                        <p>Output</p>
+                        <div class="menu">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                    <div class="output-content">
+                        <p>The rendered output looks like this:</p> <br>
+                        <p>This <code class="inline-code">word</code> is inline code. This <h2 class="inline-heading">word</h2> is a level-two heading.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </section>
+</body>
+
+</html>

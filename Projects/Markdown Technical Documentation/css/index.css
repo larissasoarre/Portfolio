@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&family=Syne:wght@400;700;800&display=swap');
+
+@font-face {
+    font-family: 'MyType';
+    src: url(../../fonts/Kingthings_Trypewriter_2.ttf);
+}
+
+:root {
+    --line-gray: rgb(240, 240, 240);
+    --background-gray: rgb(240, 240, 240);
+    --white-gray: #fcfcfc;
+    --blockquote-gray: #f5f4f4;
+    --pink: rgb(255, 83, 143);
+    --white: #fff;
+    --black: #000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 8px 0;
+}
+
+h3 {
+    font-size: 18.72px;
+    margin: 6px 0;
+}
+
+h4 {
+    font-size: 16px;
+    margin: 6px 0;
+}
+
+h5 {
+    font-size: 13.28px;
+    margin: 4px 0;
+}
+
+h6 {
+    font-size: 10.72px;
+    margin: 2px 0;
+}
+
+p, a, .output-content, table {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+}
+
+.top-logo {
+    width: 100%;
+    font-size: 21px;
+    padding: 15px 0 15px 10%;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    border-bottom: 1px solid var(--line-gray);
+    background-color: var(--white);
+    position: absolute;
+    z-index: 3;
+}
+
+.top-logo span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    color: var(--pink);
+    font-size: 19px;
+}
+
+#page-content {
+    width: 100%;
+    display: flex;
+}
+
+#navbar {
+    width: 30%;
+    height: 100%;
+    padding-top: 70px;
+    background-color: var(--white-gray);
+    border-right: 1px solid var(--line-gray);
+    position: fixed;
+    z-index: -1;
+}
+
+#navbar header, #navbar li {
+    padding: 8px 10px 8px 0;
+    margin-left: 35%;
+    list-style-type: none;
+}
+
+#navbar header p {
+    font-weight: 800;
+}
+
+#navbar li {
+    border-bottom: 1px solid var(--line-gray) !important;
+    padding-left: 5px;
+}
+
+#navbar li:last-of-type {
+    border-bottom: none;
+}
+
+#navbar li:hover {
+    background-color: var(--background-gray);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 15px;
+}
+
+.nav-link i {
+    width: 30px;
+}
+
+#main-doc {
+    width: 70%;
+    padding: 100px 50px 0;
+    position: absolute;
+    right: 0;
+}
+
+#Headings, #Paragraphs, #Line_Breaks, #Emphasis, #Blockquote, #Lists, #Code, #Horizontal_Rules, #Links, #Images, #Escaping_Characters, #HTML, .sub-section {
+    margin: 80px 0;
+}
+
+.inline-code {
+    background-color: var(--background-gray);
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+.block-code {
+    background-color: var(--background-gray);
+    border-radius: 5px;
+    padding: 10px 20px 0;
+    margin: 25px 0;
+    white-space: pre-wrap;
+}
+
+.example-output {
+    border: 2px solid var(--pink);
+    border-radius: 10px;
+    width: fit-content;
+    min-width: 250px;
+}
+
+.output-top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.output-top-bar p {
+    color: var(--pink);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.menu {
+    display: flex;
+}
+
+.circle {
+    width: 12px;
+    height: 12px;
+    border: 2px solid var(--pink);
+    border-radius: 50%;
+    margin: 0 3px;
+}
+
+.output-content {
+    padding: 0 25px 25px;
+}
+
+blockquote {
+    background-color: var(--blockquote-gray);
+    padding: 20px;
+    border-left: 9px solid var(--pink);
+    margin: 20px 0 0;
+}
+
+blockquote h4 {
+    font-family: 'Syne', sans-serif;
+}
+
+blockquote li {
+    list-style-type: circle;
+    margin-left: 17px;
+}
+
+.output-content li {
+    margin-left: 17px;
+}
+
+hr {
+    margin: 20px 0 0;
+}
+
+.output-content a {
+    text-decoration: none;
+    color: var(--pink);
+}
+
+table {
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    width: 150px;
+    padding: 5px;
+    border: 2px solid var(--pink);
+    text-align: center;
+}
+
+.long-link {
+    line-break: anywhere;
+}
+
+.output-content.image {
+    width: 100%
+}
+
+img {
+    width: 100%;
+}
+
+.inline-heading {
+    display: inline;
+}
+
+/* Media queries for the whole page  */
+@media (max-width: 1000px) {
+    #navbar header, #navbar li {
+        margin-left: 15%;
+    }
+}
+
+@media (max-width: 690px) {
+    #navbar {
+        display: none;
+    }
+
+    #main-doc {
+        width: 100%;
+        padding: 100px 25px 0;
+    }
+}
