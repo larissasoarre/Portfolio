@@ -39,11 +39,11 @@ main h2 {
     padding-left: 50px;
 }
 
-.text-area a {
+.inline-link {
     box-shadow: inset 0 -4px var(--hightlight-color);
     transition: ease-in-out .3s;
 }
-.text-area a:hover {
+.inline-link:hover {
     box-shadow: inset 0 -8px var(--hightlight-color);
 }
 
