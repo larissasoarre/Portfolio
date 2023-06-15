@@ -784,16 +784,14 @@ ul {
 
 
 /* ----- PROJECTS I'VE WORKED ON ------- */
+.my-projets {
+    width: 100%;
+}
+
 #projects-title h2 {
     font-size: 27px;
     text-align: center;
     padding-top: 50px;
-}
-
-.all-projects-container {
-    padding: 40px;
-    display: flex;
-    justify-content: center;
 }
 
 .project-container {
@@ -881,7 +879,7 @@ ul {
 
 .swiper-wrapper {
     width: 100%;
-    padding: 60px 0px;
+    padding: 60px 0;
 }
 
 .swiper-slide {
@@ -900,11 +898,6 @@ ul {
 @media (min-width: 1050px) {
     #projects-title h2 {
         padding-top: 100px;
-    }
-
-    .swiper-wrapper {
-        display: flex;
-        justify-content: center;
     }
 }
 
@@ -937,6 +930,7 @@ ul {
     margin-top: 100px;
     margin-bottom: 100px;
     position: relative;
+    overflow: hidden;
 }
 
 .contact-container p {
@@ -1020,6 +1014,12 @@ ul {
     }
 }
 
+@media (max-width: 800px) {
+    #laptop {
+        display: none;
+    }
+}
+
 @media (max-width: 705px) {
     .contact-container {
         padding: 0px 30px;
@@ -1035,10 +1035,6 @@ ul {
 
     #question-mark {
         font-size: 40px;
-    }
-
-    #laptop {
-        display: none;
     }
 
     .social-platforms h3 {

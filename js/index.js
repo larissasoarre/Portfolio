@@ -74,7 +74,7 @@ const swiper = new Swiper(".mySwiper", {
     
         1050: {
             slidesPerView: 3
-        },
+        }
     },
     spaceBetween: 0,
     pagination: {
