@@ -200,7 +200,6 @@ h2 {
 }
 
 
-
 /* HEADER */
 .hero-1 {
   width: 100%;
@@ -234,6 +233,7 @@ h2 {
 .hero-quote h2 {
   margin: 0px;
   line-height: 55px;
+  font-family: Teko;
 }
 
 .hero-quote p {
