@@ -233,7 +233,8 @@ h2 {
 .hero-quote h2 {
   margin: 0px;
   line-height: 55px;
-  font-family: Teko;
+  color: white;
+  font-family: Teko !important;
 }
 
 .hero-quote p {
