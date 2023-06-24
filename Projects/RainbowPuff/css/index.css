@@ -596,6 +596,18 @@ nav a {
     }
 }
 
+@media (max-width: 425px) {
+    .section-three-cover h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 370px) {
+    .section-three-cover h1 {
+        font-size: 25px;
+    }
+}
+
 /* the collection text */
 @media (max-width: 1175px) {
     .blockquote.one {
@@ -633,6 +645,10 @@ nav a {
 @media (max-width: 500px) {
     .section-three-text .paragraphs {
         margin: 0 20px;
+    }
+
+    .section-four {
+        padding-top: 0;
     }
 }
 
