@@ -1,5 +1,4 @@
 //Navbar Hamburger
-
 window.onload = function () {
     const menuButton = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-nav-container');
