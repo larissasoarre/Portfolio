@@ -3,7 +3,7 @@ This website showcases an exceptional collection of dresses created through the 
 
 Each dress in this collection is the result of hours of experimentation and design. Using advanced algorithms and data analysis, I've trained an AI model to generate dress designs that are both innovative and stylish.
 
-The result is a collection of dresses that pushes the boundaries of what's possible in the world of fashion.You can view the project live [here](insertlinkhere).
+The result is a collection of dresses that pushes the boundaries of what's possible in the world of fashion.You can view the project live [here](https://larissasoares.com/projects/rainbowpuff/).
 
 ## ✨ Features
 The RainbowPuff website includes:
@@ -16,7 +16,7 @@ The RainbowPuff website includes:
 ## ⚙️ Instalation
 To install the project, follow these steps:
 
-1. Fork the project from [this repository](linkhhere).
+1. Fork the project from [this repository](https://github.com/larissasoarre/RainbowPuff).
 2. Clone the forked repository to your computer using the command 'git clone'.
 3. Open the index.html file in your web browser to view the website.
 
