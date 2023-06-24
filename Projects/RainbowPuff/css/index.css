@@ -646,10 +646,6 @@ nav a {
     .section-three-text .paragraphs {
         margin: 0 20px;
     }
-
-    .section-four {
-        padding-top: 0;
-    }
 }
 
 /*** STYLING OF THE COLLECTION DRESSES GALLERY SECTION ***/
@@ -955,6 +951,17 @@ nav a {
     .section-four .text {
         padding: 50px 20px;
     }
+
+    @media (max-width: 500px) {
+        .section-four {
+            padding: 0;
+        }
+    
+        .section-three-text {
+            padding-bottom: 50px;
+        }
+    }
+    
 }
 
 @media (max-width: 900px) {
