@@ -207,8 +207,8 @@ p {
         transition: ease-in-out 0.4s;
         background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent white background */
         backdrop-filter: blur(15px); /* Fallback for supporting browsers */
-      }
-      
+    }
+
 
     .nav-links.active {
         transform: translateX(0);
