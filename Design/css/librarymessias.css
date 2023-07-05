@@ -88,6 +88,7 @@ p {
     margin: auto;
     width: 100%;
     position: absolute;
+    z-index: 3;
 }
 
 .navbar h2 {
@@ -132,6 +133,40 @@ p {
     object-fit: cover;
     min-width: 100%;
     min-height: 100%;
+    transform: scale(2);
+    margin-top: -100px;
+}
+
+@media (max-width: 1000px) {
+    .hero-content img {
+        transform: scale(2.6);
+    }
+}
+
+@media (max-width: 535px) {
+    .hero-content img {
+        margin-top: 0px;
+        transform: scale(2.1);
+    }
+}
+
+@media (max-width: 460px) {
+    .hero-content img {
+        transform: scale(1.8);
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 370px) {
+    .hero-content img {
+        transform: scale(1.5);
+    }
+}
+
+@media (max-width: 304px) {
+    .hero-content img {
+        transform: scale(1.2);
+    }
 }
 
 .hamburger {
