@@ -161,7 +161,7 @@ ul {
     z-index: 98;
     background-color: var(--primary-color);
     margin-top: 70px;
-    transition: 0.4s;
+    transition: ease-in-out 0.4s;
 }
 
 .mobile-nav-container.is-active {

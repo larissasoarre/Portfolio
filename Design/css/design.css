@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300&display=swap');
+
+@font-face {
+    font-family: Ethereal;
+    src: url(../fonts/Ethereal-Thin.otf);
+}
+
+@font-face {
+    font-family: BrownSugar;
+    src: url(../fonts/BrownSugar.ttf);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #dbf1fc;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #68bfed;
+    border-radius: 8px;
+}
+
+@supports (scrollbar-color: #68bfed #dbf1fc) {
+    * {
+        scrollbar-color: #68bfed #dbf1fc;
+        scrollbar-width: auto;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2 {
+    font-family: Ethereal;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Nunito Sans';
+    color: black;
+}
+
+p {
+    font-family: 'Nunito Sans';
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(120deg, #68bfed, #ff6d9c);
+    background-size: 200% 200%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 50px 0;
+    color: white;
+    align-items: center;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.navbar h2 {
+    color: white;
+    font-family: BrownSugar;
+    font-size: 50px;
+    opacity: 0.7;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links p {
+    text-transform: uppercase;
+}
+
+.nav-links p:nth-child(2) {
+    padding-left: 60px;
+}
+
+.nav-links a {
+    color: white;
+    box-shadow: inset 0 0px #68bfed;
+    transition: ease-in-out .3s;
+}
+
+.nav-links a:hover {
+    box-shadow: inset 0 -10px #68bfed;
+}
+
+.hero-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    color: white;
+    padding: 0 90px;
+    margin-top: -87px;
+    max-width: 1300px;
+    margin: -87px auto 0;
+}
+
+.hero-content p {
+    font-size: 40px;
+    font-family: 'Nunito Sans';
+}
+
+.hamburger {
+    position: absolute;
+    right: 30px;
+    display: none;
+    width: 30px;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3.5px;
+    background-color: white;
+    margin: 6px 0px;
+    border-radius: 30px;
+    transition: 0.4s;
+    transition: ease-in-out 0.4s;
+    margin-left: auto;
+}
+
+.hamburger:after {
+    width: 70%;
+}
+
+.hamburger.is-active::before {
+    transform: rotate(-45deg) translate(-7px, 5px);
+    background-color: white;
+}
+
+.hamburger.is-active .bar {
+    width: 0;
+}
+
+.hamburger.is-active::after {
+    width: 100%;
+    transform: rotate(45deg) translate(-8px, -5px);
+    background-color: white;
+}
+
+@media (max-width: 550px) {
+    .hero-content {
+        padding: 0 40px;
+    }
+
+    .hero-content p {
+        font-size: 25px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        display: block;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        z-index: 3;
+        padding-top: 80px;
+        transition: ease-in-out 0.4s;
+        backdrop-filter: blur(15px);
+        opacity: 0.9;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .nav-links p:nth-child(2) {
+        padding-left: 0;
+    }
+
+    .nav-links p {
+        margin: auto;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .hero a:hover {
+        box-shadow: inset 0 0px #68bfed;
+        opacity: 0.8;
+    }
+}
+
+.work {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.project {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.project img {
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.p-hover {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    text-transform: uppercase;
+}
+
+.p-hover h3 {
+    font-family: 'Nunito Sans';
+    font-size: 35px;
+}
+
+.p-hover.one {
+    background-color: #150728;
+    color: white;
+}
+
+.p-hover.two {
+    background-color: #E8C3B1;
+    color: black;
+}
+
+.p-hover.three {
+    background-color: #6210D7;
+    color: white;
+}
+
+.p-hover.four {
+    background-color: #5ABCCD;
+    color: white;
+}
+
+.p-hover.one.active,
+.p-hover.two.active,
+.p-hover.three.active,
+.p-hover.four.active {
+    opacity: 1;
+}
+
+@media (max-width: 670px) {
+    .work {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 530px) {
+    .project {
+        height: 300px;
+    }
+}
+
+@media (max-width: 400px) {
+    .project {
+        height: 250px;
+    }
+}
+
+.footer {
+    width: 100%;
+    padding: 100px 0 50px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.footer div {
+    justify-self: center;
+    padding: 0 20px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer b {
+    color: #68bfed;
+}
+
+.footer a {
+    transition: ease-in-out .2s;
+}
+
+.footer a:hover {
+    opacity: 0.7;
+}
+
+@media (max-width: 550px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        max-width: 250px;
+        margin: auto;
+    }
+
+    .footer-title {
+        margin-top: 50px;
+        box-sizing: unset;
+    }
+
+    .footer {
+        padding: 10px 0 50px;
+    }
+}
