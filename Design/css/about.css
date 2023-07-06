@@ -153,6 +153,10 @@ p {
         display: block;
     }
 
+    .navbar {
+        padding: 25px 20px 0;
+    }
+
     .nav-links {
         position: fixed;
         display: block;
