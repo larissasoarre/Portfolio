@@ -101,10 +101,11 @@ p {
 
 .nav-links p {
     text-transform: uppercase;
+    padding-left: 60px;
 }
 
-.nav-links p:nth-child(2) {
-    padding-left: 60px;
+.nav-links p:first-of-type {
+    padding-left: 0;
 }
 
 .nav-links a {
@@ -180,7 +181,7 @@ p {
     background-color: white;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
     .hero-content {
         padding: 0 40px;
     }
@@ -214,14 +215,11 @@ p {
         transform: translateX(0);
     }
 
-    .nav-links p:nth-child(2) {
-        padding-left: 0;
-    }
-
     .nav-links p {
         margin: auto;
         text-align: center;
         margin-top: 30px;
+        padding-left: 0;
     }
 
     .hero a:hover {
@@ -360,4 +358,63 @@ p {
     .footer {
         padding: 10px 0 50px;
     }
+}
+
+.scroll-to-top-button {
+    position: fixed;
+    bottom: 10px;
+    right: 5px;
+    display: none;
+    z-index: 99;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+#scrollToTopButton .arrow {
+    position: relative; /* Changed position to 'relative' */
+    display: inline-block; /* Changed display to 'inline-block' */
+    width: 30px;
+    height: 30px; /* Added height */
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow::after,
+.arrow::before {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 2px;
+    background-color: black;
+    border-radius: 30px;
+    transition: 0.4s;
+    transition: ease-in-out 0.4s;
+}
+
+.arrow::before {
+    top: 50%;
+    transform: translate(-65%, -50%) rotate(-45deg); /* Adjusted rotation and translation */
+}
+
+.arrow::after {
+    top: 50%;
+    transform: translate(0, -50%) rotate(45deg); /* Adjusted rotation and translation */
+}
+
+.scroll-to-top-button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top-button.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+body {
+    overflow-x: hidden;
 }

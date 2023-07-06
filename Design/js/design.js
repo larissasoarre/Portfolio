@@ -46,3 +46,20 @@ menuButton.addEventListener('click', function () {
     menuButton.classList.toggle('is-active');
     menuMobile.classList.toggle('active');
 });
+
+window.addEventListener('scroll', function() {
+    var scrollToTopButton = document.getElementById('scrollToTopButton');
+  
+    // Check if the user has scrolled past a certain height (adjust as needed)
+    if (window.scrollY > 500) {
+      scrollToTopButton.classList.add('show');
+    } else {
+      scrollToTopButton.classList.remove('show');
+    }
+});
+
+document.getElementById('scrollToTopButton').addEventListener('click', function(e) {
+    e.preventDefault();
+    // Scroll to the top of the page
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
