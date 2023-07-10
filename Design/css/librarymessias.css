@@ -147,27 +147,27 @@ p {
     }
 }
 
-@media (max-width: 535px) {
+@media (max-width: 565px) {
     .hero-content img {
         margin-top: 0px;
         transform: scale(2.1);
     }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 470px) {
     .hero-content img {
         transform: scale(1.8);
         margin-left: 5px;
     }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 400px) {
     .hero-content img {
         transform: scale(1.5);
     }
 }
 
-@media (max-width: 304px) {
+@media (max-width: 335px) {
     .hero-content img {
         transform: scale(1.2);
     }
