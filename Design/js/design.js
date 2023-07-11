@@ -41,11 +41,19 @@ pjFour.addEventListener('mouseout', function () {
 
 const menuButton = document.querySelector('.hamburger');
 const menuMobile = document.querySelector('.nav-links');
+const navItemWork = document.querySelector('.nav-list-work');
 
 menuButton.addEventListener('click', function () {
     menuButton.classList.toggle('is-active');
     menuMobile.classList.toggle('active');
 });
+
+navItemWork.addEventListener('click', function () {
+    menuButton.classList.remove('is-active');
+    menuMobile.classList.remove('active');
+});
+
+
 
 window.addEventListener('scroll', function() {
     var scrollToTopButton = document.getElementById('scrollToTopButton');

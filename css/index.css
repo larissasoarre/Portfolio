@@ -28,6 +28,10 @@
     --scrollbar-background: #d8dfe0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     max-width: 1355px;
     margin: 0 auto !important;
@@ -47,6 +51,15 @@ h2 {
 a {
     text-decoration: none;
     color: var(--secondary-color);
+}
+
+.link-in-text {
+    transition: ease-in-out .3s;
+    box-shadow: inset 0 -1px var(--hightlight-color);
+}
+
+.link-in-text:hover {
+    box-shadow: inset 0 -8px var(--hightlight-color);
 }
 
 p {
@@ -113,7 +126,7 @@ ul {
 
 .hamburger {
     position: absolute;
-    right: 30px;
+    right: 10px;
     display: none;
     width: 40px;
     appearance: none;
@@ -126,14 +139,20 @@ ul {
 .hamburger .bar,
 .hamburger:after,
 .hamburger:before {
+    background-color: var(--hightlight-color);
     content: '';
     display: block;
     width: 100%;
-    height: 2px;
-    background-color: var(--hightlight-color);
+    height: 3.5px;
     margin: 6px 0px;
-    border-radius: 5px;
+    border-radius: 30px;
     transition: 0.4s;
+    transition: ease-in-out 0.4s;
+    margin-left: auto;
+}
+
+.hamburger:after {
+    width: 70%;
 }
 
 .hamburger.is-active::before {
@@ -142,11 +161,12 @@ ul {
 }
 
 .hamburger.is-active .bar {
-    opacity: 0;
+    width: 0;
 }
 
 .hamburger.is-active::after {
-    transform: rotate(45deg) translate(-6px, -5px);
+    width: 100%;
+    transform: rotate(45deg) translate(-8px, -5px);
     background-color: var(--hightlight-color);
 }
 
@@ -185,14 +205,14 @@ ul {
     color: var(--hightlight-color);
 }
 
-@media (max-width: 755px) {
+@media (max-width: 800px) {
     .nav-container {
         justify-content: flex-end;
         margin-right: 3%;
     }
 }
 
-@media (max-width: 615px) {
+@media (max-width: 750px) {
     .hamburger {
         display: block;
     }
@@ -398,7 +418,6 @@ ul {
 
 
 /* ---- ABOUT ME TEXT ---- */
-
 .about-me-text {
     padding: 150px 0px;
     display: flex;

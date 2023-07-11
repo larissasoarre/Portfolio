@@ -1,39 +1,30 @@
 //Navbar Hamburger
-window.onload = function () {
-    const menuButton = document.querySelector('.hamburger');
-    const mobileMenu = document.querySelector('.mobile-nav-container');
-    const navItemAboutMe = document.querySelector('.nav-list-aboutme');
-    const navItemProjects = document.querySelector('.nav-list-projects');
-    const navItemContact = document.querySelector('.nav-list-contact');
-    const timesClicked = 1
 
-    menuButton.addEventListener('click', function () {
-        menuButton.classList.toggle('is-active');
-        mobileMenu.classList.toggle('is-active');
+const menuButton = document.querySelector('.hamburger');
+const mobileMenu = document.querySelector('.mobile-nav-container');
+const navItemAboutMe = document.querySelector('.nav-list-aboutme');
+const navItemProjects = document.querySelector('.nav-list-projects');
+const navItemContact = document.querySelector('.nav-list-contact');
 
-    })
+menuButton.addEventListener('click', function () {
+    menuButton.classList.toggle('is-active');
+    mobileMenu.classList.toggle('is-active');
+});
 
-    navItemAboutMe.addEventListener('click', function () {
-        mobileMenu.classList.toggle('toggle-back');
-        menuButton.classList.remove('is-active');
-    })
+navItemAboutMe.addEventListener('click', function () {
+    menuButton.classList.remove('is-active');
+    mobileMenu.classList.remove('is-active');
+});
 
-    navItemProjects.addEventListener('click', function () {
-        mobileMenu.classList.toggle('toggle-back');
-        menuButton.classList.remove('is-active');
-    })
+navItemProjects.addEventListener('click', function () {
+    menuButton.classList.remove('is-active');
+    mobileMenu.classList.remove('is-active');
+});
 
-    navItemContact.addEventListener('click', function () {
-        mobileMenu.classList.toggle('toggle-back');
-        menuButton.classList.remove('is-active');
-    })
-
-    menuButton.addEventListener('click', function () {
-        mobileMenu.classList.remove('toggle-back');
-        menuButton.classList.toggle('is-active');
-    })
-
-}
+navItemContact.addEventListener('click', function () {
+    menuButton.classList.remove('is-active');
+    mobileMenu.classList.remove('is-active');
+});
 
 
 
@@ -66,11 +57,11 @@ const swiper = new Swiper(".mySwiper", {
         0: {
             slidesPerView: 1
         },
-    
+
         730: {
             slidesPerView: 2,
         },
-    
+
         1050: {
             slidesPerView: 3
         }
